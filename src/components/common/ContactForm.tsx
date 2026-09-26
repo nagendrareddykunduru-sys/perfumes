@@ -11,10 +11,10 @@ interface ContactFormProps {
 }
 
 export const ContactForm: React.FC<ContactFormProps> = ({
-  initialCategory = 'Wholesale',
+  initialCategory = 'Attar',
   initialProduct = '',
   title = 'Send Business Enquiry',
-  subtitle = 'Submit your requirements for retail, wholesale supply, or turnkey contract manufacturing.'
+  subtitle = 'Submit your requirements for retail, orders, or distribution partnerships.'
 }) => {
   const [formData, setFormData] = useState({
     name: '',
@@ -36,8 +36,6 @@ export const ContactForm: React.FC<ContactFormProps> = ({
     'Attar',
     'Perfume',
     'Others',
-    'Manufacturing',
-    'Wholesale',
     'Retail',
     'Imports & Exports',
     'Distributors'

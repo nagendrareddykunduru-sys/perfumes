@@ -134,7 +134,7 @@ export const AdminPreviewPage: React.FC = () => {
             <div className="bg-white p-4 rounded-xl border border-zinc-200 shadow-xs flex flex-wrap items-center justify-between gap-4">
               <div className="flex flex-wrap items-center gap-2">
                 <span className="text-xs font-semibold text-zinc-500 mr-2">Filter by:</span>
-                {['ALL', 'New', 'Contacted', 'Attar', 'Perfume', 'Others', 'Wholesale', 'Manufacturing'].map(f => (
+                {['ALL', 'New', 'Contacted', 'Attar', 'Perfume', 'Others'].map(f => (
                   <button
                     key={f}
                     onClick={() => setEnquiryFilter(f)}
@@ -354,7 +354,6 @@ export const AdminPreviewPage: React.FC = () => {
                     <option value="Attar">Attar</option>
                     <option value="Perfume">Perfume</option>
                     <option value="Others">Others</option>
-                    <option value="Manufacturing">Manufacturing</option>
                   </select>
                 </div>
 

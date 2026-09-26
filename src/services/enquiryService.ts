@@ -40,10 +40,10 @@ export const enquiryService = {
             company: 'Royal Aura Perfumery Ltd',
             phone: '+91 98201 54321',
             email: 'vikram@royalaura.in',
-            category: 'Manufacturing',
-            product: 'Custom Perfumes & Box Packaging',
-            quantity: '2,500 Bottles (100ml)',
-            message: 'Inquiring about turnkey contract manufacturing for a new niche extrait de parfum collection, including heavy crystal flacons and velvet rigid boxes.',
+            category: 'Perfume',
+            product: 'French Royal Extrait',
+            quantity: '100 Bottles (50ml)',
+            message: 'Inquiring about availability and delivery for a boutique luxury perfume collection in Hyderabad.',
             createdAt: new Date(Date.now() - 86400000).toISOString(),
             status: 'New'
           }

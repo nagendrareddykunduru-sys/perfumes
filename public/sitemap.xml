@@ -26,16 +26,6 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://www.barship.com/manufacturing</loc>
-    <priority>0.9</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.barship.com/wholesale</loc>
-    <priority>0.9</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
     <loc>https://www.barship.com/retail</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>

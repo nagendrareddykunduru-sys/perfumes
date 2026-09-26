@@ -39,15 +39,15 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/manufacturing" className="hover:text-amber-400 transition-colors flex items-center gap-1.5 text-xs text-zinc-300">
+                <Link to="/others" className="hover:text-amber-400 transition-colors flex items-center gap-1.5 text-xs text-zinc-300">
                   <ArrowUpRight className="w-3 h-3 text-amber-500" />
-                  Custom Manufacturing
+                  Bakhoor & Others
                 </Link>
               </li>
               <li>
-                <Link to="/wholesale" className="hover:text-amber-400 transition-colors flex items-center gap-1.5 text-xs text-zinc-300">
+                <Link to="/contact" className="hover:text-amber-400 transition-colors flex items-center gap-1.5 text-xs text-zinc-300">
                   <ArrowUpRight className="w-3 h-3 text-amber-500" />
-                  Wholesale Supply
+                  Contact & Showroom
                 </Link>
               </li>
             </ul>
@@ -93,46 +93,41 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Column 3: SERVICES */}
+          {/* Column 3: BUSINESS NETWORK */}
           <div>
             <h4 className="font-cinzel text-sm uppercase font-bold text-amber-400 tracking-wider mb-5 flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-amber-400 inline-block" />
-              SERVICES
+              BUSINESS NETWORK
             </h4>
             <ul className="space-y-3 text-xs text-zinc-300">
               <li>
-                <Link to="/manufacturing" className="hover:text-amber-400 transition-colors block">
-                  Custom Perfumes Formulation
-                </Link>
-              </li>
-              <li>
-                <Link to="/manufacturing" className="hover:text-amber-400 transition-colors block">
-                  Bottle Designing & Caps
-                </Link>
-              </li>
-              <li>
-                <Link to="/manufacturing" className="hover:text-amber-400 transition-colors block">
-                  Box Packaging & Gold Foil
-                </Link>
-              </li>
-              <li>
-                <Link to="/manufacturing" className="hover:text-amber-400 transition-colors block">
-                  Custom Fragrances (Private Label)
-                </Link>
-              </li>
-              <li>
-                <Link to="/manufacturing" className="hover:text-amber-400 transition-colors block">
-                  Gift Packages & Royal Hampers
+                <Link to="/retail" className="hover:text-amber-400 transition-colors block">
+                  Retail Flagship Boutique (Hyderabad)
                 </Link>
               </li>
               <li>
                 <Link to="/importers-exporters" className="hover:text-amber-400 transition-colors block">
-                  Importers & Exporters Desk
+                  Direct Imports (10+ Sovereign Origins)
+                </Link>
+              </li>
+              <li>
+                <Link to="/importers-exporters" className="hover:text-amber-400 transition-colors block">
+                  Global Exports Desk (UAE Hub)
                 </Link>
               </li>
               <li>
                 <Link to="/distributors" className="hover:text-amber-400 transition-colors block">
-                  Distribution Partnerships
+                  Regional Distribution Network
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="hover:text-amber-400 transition-colors block">
+                  Company Profile & Heritage
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="hover:text-amber-400 transition-colors block">
+                  Showroom & Corporate Desk
                 </Link>
               </li>
             </ul>
@@ -204,9 +199,6 @@ export const Footer: React.FC = () => {
             </Link>
             <Link to="/terms-conditions" className="hover:text-amber-400 transition-colors">
               Terms & Conditions
-            </Link>
-            <Link to="/wholesale" className="hover:text-amber-400 transition-colors">
-              B2B Inquiry
             </Link>
             <a 
               href={getWhatsAppUrl()} 

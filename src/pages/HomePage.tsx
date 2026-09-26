@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { Hero } from '../components/home/Hero';
 import { BusinessCategories } from '../components/home/BusinessCategories';
 import { HomeProductsPreview } from '../components/home/HomeProductsPreview';
-import { ManufacturingSection } from '../components/home/ManufacturingSection';
-import { WholesaleSection } from '../components/home/WholesaleSection';
 import { AboutSection } from '../components/home/AboutSection';
 import { ContactForm } from '../components/common/ContactForm';
 import { MapPin, Phone, Clock } from 'lucide-react';
@@ -29,19 +27,13 @@ export const HomePage: React.FC = () => {
       {/* 1. Hero Section */}
       <Hero />
 
-      {/* 2. Business Categories Section (6 Pillars) */}
+      {/* 2. Business Categories Section */}
       <BusinessCategories />
 
-      {/* 3. Featured Showcase (Tabs for Attar, Perfume, Others, Manufacturing) */}
+      {/* 3. Featured Showcase (Tabs for Attar, Perfume, Others) */}
       <HomeProductsPreview onOpenEnquiryModal={handleOpenEnquiry} />
 
-      {/* 4. Custom Manufacturing Section with Process Roadmap */}
-      <ManufacturingSection />
-
-      {/* 5. Wholesale Solutions Section */}
-      <WholesaleSection />
-
-      {/* 6. About Section */}
+      {/* 4. About Section */}
       <AboutSection />
 
       {/* 7. Quick Visit & Contact Info Banner */}
@@ -110,7 +102,7 @@ export const HomePage: React.FC = () => {
 
           <div className="max-w-2xl mx-auto">
             <ContactForm
-              initialCategory={modalEnquiryProduct ? modalEnquiryProduct.category : 'Wholesale'}
+              initialCategory={modalEnquiryProduct ? modalEnquiryProduct.category : 'Attar'}
               initialProduct={modalEnquiryProduct ? modalEnquiryProduct.name : ''}
               title="Direct Business Enquiry"
               subtitle="Specify your details below to receive product catalogues and volume price quotes."

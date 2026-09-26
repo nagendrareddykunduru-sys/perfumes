@@ -31,13 +31,13 @@ export const AboutPage: React.FC = () => {
                 Foundational Principles
               </span>
               <h2 className="font-cinzel text-2xl sm:text-3xl font-bold text-zinc-950">
-                Pioneering Attar, Perfume & Bespoke Manufacturing
+                Pioneering Attar, Perfume & Fragrance Distillation
               </h2>
               <p className="text-zinc-600 text-sm sm:text-base leading-relaxed">
-                <strong>BARSHIP FRAGRANCES</strong> operates as an integrated perfumery house in Hyderabad, Telangana, serving both individual connoisseurs and commercial business enterprises. Operating alongside our associated brands <strong>Baron Perfumes</strong> and <strong>Zohran Perfumes</strong>, our enterprise bridges centuries-old oriental distillation traditions with modern cosmetic science.
+                <strong>BARSHIP FRAGRANCES</strong> operates as an integrated perfumery house in Hyderabad, Telangana, serving fragrance connoisseurs and commercial partners. Operating alongside our associated brands <strong>Baron Perfumes</strong> and <strong>Zohran Perfumes</strong>, our enterprise bridges centuries-old oriental distillation traditions with modern olfactory craftsmanship.
               </p>
               <p className="text-zinc-600 text-sm sm:text-base leading-relaxed">
-                Our operations encompass six foundational verticals: <strong>Retail, Wholesale, Imports, Exports, Distribution, and Turnkey Custom Manufacturing</strong>. From sourcing rare agarwood harvests across Southeast Asia to custom tooling luxury crystal perfume flacons, we maintain uncompromising quality standards across every tier of our supply chain.
+                Our operations encompass core verticals: <strong>Retail, Imports, Exports, and Distribution</strong>. From sourcing rare agarwood harvests across Southeast Asia to offering luxury crystal perfume flacons, we maintain uncompromising quality standards across every tier of our supply chain.
               </p>
 
               {/* Factual Information Callout */}
@@ -96,14 +96,14 @@ export const AboutPage: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "1. Retail", desc: "Showroom consultations, direct fragrance sampling, and retail sales of attars and luxury perfumes at our Hyderabad boutique." },
-              { title: "2. Wholesale", desc: "Bulk fragrance oils, concentrates, pure distillates, and packaged stock for retailers and regional perfume merchants." },
-              { title: "3. Import", desc: "Direct origin procurement of genuine agarwood chips, resins, and essences across 10+ producing nations." },
-              { title: "4. Export", desc: "International air and sea freight distribution servicing Middle Eastern, European, and Asian fragrance markets." },
-              { title: "5. Distribution", desc: "Organized wholesale distributor partnerships providing regional territorial sales and retailer replenishment." },
-              { title: "6. Attar", desc: "Pure, certified single-origin Dehn Al Oudh and non-alcoholic concentrated perfume oils spanning Cambodian, Indian, Moroccan, and other varieties." },
-              { title: "7. Perfume & Others", desc: "Handcrafted spray perfumes (Extrait & EDP), traditional bakhoor incense, ambient air sprays, and scented body creams." },
-              { title: "8. Custom Manufacturing", desc: "Turnkey formulation, bespoke bottle engineering, rigid box packaging, and private label compounding." },
+              { title: "1. Retail Boutique", desc: "Showroom consultations, direct fragrance sampling, and retail sales of attars and luxury perfumes at our Hyderabad boutique." },
+              { title: "2. Origin Imports", desc: "Direct origin procurement of genuine agarwood chips, resins, and essences across 10+ producing nations." },
+              { title: "3. Global Exports", desc: "International air and sea freight distribution servicing Middle Eastern, European, and Asian fragrance markets." },
+              { title: "4. Regional Distribution", desc: "Organized distributor partnerships providing regional territorial sales and retailer replenishment." },
+              { title: "5. Artisanal Attar", desc: "Pure, certified single-origin Dehn Al Oudh and non-alcoholic concentrated perfume oils spanning Cambodian, Indian, Moroccan, and other varieties." },
+              { title: "6. Fine Spray Perfume", desc: "Handcrafted spray perfumes in Extrait de Parfum (35%) and Eau de Parfum formulations with Italian fine-mist diffusers." },
+              { title: "7. Arabesque Bakhoor", desc: "Traditional home fragrance incense chips, fabric mists, and luxury scented creams." },
+              { title: "8. Corporate & VIP Gifting", desc: "Curated royal wedding hampers, bespoke presentation sets, and engraved brass plaque packaging." },
             ].map((area, idx) => (
               <div key={idx} className="bg-white rounded-xl p-5 border border-zinc-200/80 shadow-xs flex flex-col justify-between">
                 <div>

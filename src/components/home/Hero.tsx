@@ -31,13 +31,13 @@ export const Hero: React.FC = () => {
               
               {/* Subheading */}
               <p className="font-cinzel text-sm sm:text-base md:text-lg font-semibold text-amber-700 tracking-wider">
-                Retail & Wholesale | Imports | Exports | Distribution | Custom Manufacturing
+                Retail | Imports | Exports | Distribution | Artisanal Fragrances
               </p>
             </div>
 
             {/* Supporting Text */}
             <p className="text-base sm:text-lg text-zinc-600 leading-relaxed max-w-2xl font-sans font-normal">
-              Pure artisanal attar, luxury spray perfumes, bakhoor, and bespoke fragrance manufacturing for retail, wholesale, and export.
+              Pure artisanal attar, luxury spray perfumes, and arabesque bakhoor collections for retail and international trade.
             </p>
 
             {/* CTAs */}

@@ -64,30 +64,30 @@ export const AboutSection: React.FC = () => {
             </h2>
 
             <p className="text-zinc-600 text-sm sm:text-base leading-relaxed">
-              Based in Hyderabad, Telangana, <strong>BARSHIP FRAGRANCES</strong> (associated with Baron Perfumes and Zohran Perfumes) operates across the complete value chain of fine perfumery. Our core operations span <strong>Retail, Wholesale, Imports, Exports, Distribution, and Turnkey Custom Manufacturing</strong>.
+              Based in Hyderabad, Telangana, <strong>BARSHIP FRAGRANCES</strong> (associated with Baron Perfumes and Zohran Perfumes) operates across the complete value chain of fine perfumery. Our core operations span <strong>Retail, Imports, Exports, and Distribution</strong>.
             </p>
 
             <p className="text-zinc-600 text-sm sm:text-base leading-relaxed">
-              We specialize in pure concentrated <strong>Attar Oils</strong> (including single-origin Dehn Al Oudh across 10 sovereign origins), luxury fine <strong>Spray Perfumes</strong> (Extrait & Eau de Parfum), and ambient fragrance lines like <strong>Bakhoor, Home Fresheners & Curated Gift Sets</strong>, alongside turnkey private label contract manufacturing.
+              We specialize in pure concentrated <strong>Attar Oils</strong> (including single-origin Dehn Al Oudh across 10 sovereign origins), luxury fine <strong>Spray Perfumes</strong> (Extrait & Eau de Parfum), and ambient fragrance lines like <strong>Bakhoor, Home Fresheners & Curated Gift Sets</strong>.
             </p>
 
             {/* Core Competencies Checklist */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
               <div className="flex items-start gap-2 text-xs text-zinc-700">
                 <CheckCircle2 className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
-                <span><strong>Retail Boutique:</strong> Individual customer consultations & attar testing.</span>
+                <span><strong>Retail Boutique:</strong> Individual consultations & authentic attar testing.</span>
               </div>
               <div className="flex items-start gap-2 text-xs text-zinc-700">
                 <CheckCircle2 className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
-                <span><strong>Wholesale Supply:</strong> Reliable bulk liters and tiered business pricing.</span>
+                <span><strong>Origin Imports:</strong> Direct procurement from 10+ sovereign agarwood origins.</span>
               </div>
               <div className="flex items-start gap-2 text-xs text-zinc-700">
                 <CheckCircle2 className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
-                <span><strong>Direct Sourcing:</strong> Genuine agarwood from 10+ global origins.</span>
+                <span><strong>Global Exports:</strong> UAE operations & international air-cargo logistics.</span>
               </div>
               <div className="flex items-start gap-2 text-xs text-zinc-700">
                 <CheckCircle2 className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
-                <span><strong>Contract Manufacturing:</strong> Formulation, bottle engineering & rigid box packaging.</span>
+                <span><strong>Distribution:</strong> Verified retail partnerships & dedicated stock replenishment.</span>
               </div>
             </div>
 

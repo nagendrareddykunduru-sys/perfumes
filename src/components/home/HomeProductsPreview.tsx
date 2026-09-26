@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { ProductCard } from '../products/ProductCard';
 import { ProductModal } from '../products/ProductModal';
-import { ATTAR_PRODUCTS, PERFUME_PRODUCTS, OTHERS_PRODUCTS, MANUFACTURING_SERVICES } from '../../data/companyData';
+import { ATTAR_PRODUCTS, PERFUME_PRODUCTS, OTHERS_PRODUCTS } from '../../data/companyData';
 import type { ProductItem } from '../../data/companyData';
 
 interface HomeProductsPreviewProps {
@@ -11,7 +11,7 @@ interface HomeProductsPreviewProps {
 }
 
 export const HomeProductsPreview: React.FC<HomeProductsPreviewProps> = ({ onOpenEnquiryModal }) => {
-  const [activeTab, setActiveTab] = useState<'Attar' | 'Perfume' | 'Others' | 'Manufacturing'>('Attar');
+  const [activeTab, setActiveTab] = useState<'Attar' | 'Perfume' | 'Others'>('Attar');
   const [selectedProduct, setSelectedProduct] = useState<ProductItem | null>(null);
 
   const getFilteredProducts = () => {
@@ -22,8 +22,6 @@ export const HomeProductsPreview: React.FC<HomeProductsPreviewProps> = ({ onOpen
         return PERFUME_PRODUCTS.slice(0, 4);
       case 'Others':
         return OTHERS_PRODUCTS.slice(0, 4);
-      case 'Manufacturing':
-        return MANUFACTURING_SERVICES.slice(0, 4);
       default:
         return ATTAR_PRODUCTS.slice(0, 4);
     }
@@ -34,7 +32,6 @@ export const HomeProductsPreview: React.FC<HomeProductsPreviewProps> = ({ onOpen
       case 'Attar': return '/attar';
       case 'Perfume': return '/perfume';
       case 'Others': return '/others';
-      case 'Manufacturing': return '/manufacturing';
     }
   };
 
@@ -55,7 +52,7 @@ export const HomeProductsPreview: React.FC<HomeProductsPreviewProps> = ({ onOpen
               Featured Attar, Perfume & Collections
             </h2>
             <p className="mt-2 text-sm text-zinc-600 max-w-xl">
-              Select a category to preview our pure artisanal attars, luxury spray perfumes, bakhoor & ambient lines, or bespoke manufacturing services.
+              Select a category to preview our pure artisanal attars, luxury spray perfumes, and bakhoor & ambient lines.
             </p>
           </div>
 
@@ -90,16 +87,6 @@ export const HomeProductsPreview: React.FC<HomeProductsPreviewProps> = ({ onOpen
               }`}
             >
               Others (Bakhoor & Mists)
-            </button>
-            <button
-              onClick={() => setActiveTab('Manufacturing')}
-              className={`px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
-                activeTab === 'Manufacturing'
-                  ? 'bg-zinc-950 text-amber-300 shadow-sm'
-                  : 'text-zinc-600 hover:text-zinc-950'
-              }`}
-            >
-              Manufacturing
             </button>
           </div>
         </div>

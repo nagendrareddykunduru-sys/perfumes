@@ -35,12 +35,12 @@ export const BusinessCategories: React.FC = () => {
           </h2>
 
           <p className="mt-4 text-sm sm:text-base text-zinc-600 leading-relaxed">
-            From direct sourcing of pure agarwood to turnkey private label perfume manufacturing and global export channels.
+            From direct sourcing of rare origin agarwood to flagship retail boutiques and international export channels.
           </p>
         </div>
 
-        {/* 6 Premium Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* 4 Pillars Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {BUSINESS_PILLARS.map((pillar, idx) => (
             <div
               key={pillar.id}

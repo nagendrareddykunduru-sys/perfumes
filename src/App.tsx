@@ -11,8 +11,6 @@ import { AboutPage } from './pages/AboutPage';
 import { AttarPage } from './pages/AttarPage';
 import { PerfumePage } from './pages/PerfumePage';
 import { OthersPage } from './pages/OthersPage';
-import { ManufacturingPage } from './pages/ManufacturingPage';
-import { WholesalePage } from './pages/WholesalePage';
 import { RetailPage } from './pages/RetailPage';
 import { ImportersExportersPage } from './pages/ImportersExportersPage';
 import { DistributorsPage } from './pages/DistributorsPage';
@@ -35,8 +33,6 @@ export function App() {
             <Route path="/attar" element={<AttarPage />} />
             <Route path="/perfume" element={<PerfumePage />} />
             <Route path="/others" element={<OthersPage />} />
-            <Route path="/manufacturing" element={<ManufacturingPage />} />
-            <Route path="/wholesale" element={<WholesalePage />} />
             <Route path="/retail" element={<RetailPage />} />
             <Route path="/importers-exporters" element={<ImportersExportersPage />} />
             <Route path="/distributors" element={<DistributorsPage />} />
@@ -46,6 +42,8 @@ export function App() {
             <Route path="/terms-conditions" element={<TermsConditionsPage />} />
             <Route path="/admin-preview" element={<AdminPreviewPage />} />
             {/* Fallbacks for previous paths */}
+            <Route path="/manufacturing" element={<HomePage />} />
+            <Route path="/wholesale" element={<HomePage />} />
             <Route path="/products" element={<AttarPage />} />
             <Route path="/oud" element={<AttarPage />} />
             <Route path="/cosmetics" element={<OthersPage />} />
