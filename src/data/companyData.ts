@@ -1,0 +1,397 @@
+export interface ProductItem {
+  id: string;
+  name: string;
+  category: 'OUD' | 'Cosmetics' | 'Manufacturing';
+  originOrType: string;
+  description: string;
+  details: string[];
+  image: string;
+  badge?: string;
+  availableOptions: string[];
+  priceNote: string;
+}
+
+export interface BusinessPillar {
+  id: string;
+  title: string;
+  shortDesc: string;
+  longDesc: string;
+  icon: string;
+  route: string;
+  highlights: string[];
+}
+
+export const COMPANY_DETAILS = {
+  name: "BARSHIP FRAGRANCES",
+  subBrand: "Baron Perfumes – Hyderabad",
+  alternateBrand: "Baroon Perfumes / Zohran Perfumes",
+  tagline: "Retail & Wholesale | Imports | Exports | Distribution | Custom Manufacturing",
+  heroSubtitle: "Premium fragrances, OUD, cosmetics and customized fragrance solutions for retail, wholesale and business requirements.",
+  website: "www.barship.com",
+  gstin: "36ABNPH8863N2ZR",
+  phones: [
+    { name: "MM Hussain Al Najmi", number: "+91 91332 33528", raw: "919133233528", role: "Managing Director / Sales" },
+    { name: "Abdul Ilah M. Al Najmi", number: "+91 99599 30203", raw: "919959930203", role: "Operations" },
+    { name: "Abdul Rasheed M. Al Najmi", number: "+91 80196 17805", raw: "918019617805", role: "Wholesale & Logistics" },
+    { name: "UAE / International", number: "+971 52 722 6677", raw: "971527226677", role: "Global Export Desk" }
+  ],
+  primaryPhone: "+91 91332 33528",
+  primaryWhatsAppRaw: "919133233528",
+  emails: [
+    "mmhussain@barship.com",
+    "barshipfragrances@gmail.com",
+    "zohranperfumes@barship.com",
+    "zohranperfumes@gmail.com"
+  ],
+  primaryEmail: "mmhussain@barship.com",
+  locations: {
+    corporate: {
+      title: "Corporate Office",
+      address: "T303 - Floor 3rd, Rafsa Arcade, 'X' Road Old MLA Quarters, Himayath Nagar, Hyderabad - 500 029, Telangana, India",
+      city: "Hyderabad",
+      pincode: "500029"
+    },
+    showroom: {
+      title: "Retail & Wholesale Showroom",
+      subtitle: "Zohran Perfumes by BARSHIP Fragrances",
+      address: "Shop No. 1 - Lower Ground Floor, Prestige Complex - 23-3-202/204, Etebar Chowk, Masjid 'X' Road, Hyderabad - 500 002, Telangana, India",
+      city: "Hyderabad",
+      pincode: "500002"
+    },
+    international: {
+      title: "International Desk (UAE)",
+      address: "Dubai, United Arab Emirates",
+      phone: "+971 52 722 6677"
+    }
+  }
+};
+
+export const BUSINESS_PILLARS: BusinessPillar[] = [
+  {
+    id: "retail",
+    title: "RETAIL",
+    shortDesc: "Experience the ultimate collection of authentic OUD, artisanal attars, and luxury French and Oriental spray perfumes at our flagship boutique.",
+    longDesc: "BARSHIP offers connoisseurs and everyday fragrance lovers access to genuine, high-concentration perfumes, rare pure oud distillations, and bespoke personal scent blending.",
+    icon: "ShoppingBag",
+    route: "/retail",
+    highlights: ["Individual Customer Consultations", "Exclusive Showroom Experience", "Signature Gift Packaging", "Authentic Artisanal Blends"]
+  },
+  {
+    id: "wholesale",
+    title: "WHOLESALE",
+    shortDesc: "Bulk fragrance oils, pure distillations, and retail-ready packaged products with competitive tiered volume pricing for business clients.",
+    longDesc: "We supply fragrance brands, boutique perfumeries, corporate clients, and regional retailers with consistent high-volume supply, rigorous batch consistency, and transparent certificates.",
+    icon: "Boxes",
+    route: "/wholesale",
+    highlights: ["Tiered B2B Volume Pricing", "Consistent Batch Formulations", "Bulk Kilograms & Liters", "Custom Packaging Options"]
+  },
+  {
+    id: "imports",
+    title: "IMPORTS",
+    shortDesc: "Direct origin sourcing of the finest raw agarwood, rare resin chips, and pure essential oils from over 10 sovereign origin countries.",
+    longDesc: "Our veteran procurement network directly imports from verified distillers and wild-harvest agarwood forests in Cambodia, Indonesia, Malaysia, Vietnam, and Morocco.",
+    icon: "Ship",
+    route: "/importers-exporters",
+    highlights: ["10+ Direct Sourcing Origins", "Ethically Harvested Agarwood", "Customs & CITES Compliance", "Strict Purity Testing"]
+  },
+  {
+    id: "exports",
+    title: "EXPORTS",
+    shortDesc: "Delivering Hyderabad's perfumery heritage and international standard fragrance creations to the Middle East, Europe, and global markets.",
+    longDesc: "Backed by our international office in the UAE (+971 52 722 6677), BARSHIP manages seamless international export logistics, air-cargo freight, and compliant safety documentation.",
+    icon: "Globe2",
+    route: "/importers-exporters",
+    highlights: ["UAE Regional Export Hub", "Worldwide Air Cargo Delivery", "MSDS & Lab Certifications", "Private Label Export Batches"]
+  },
+  {
+    id: "distribution",
+    title: "DISTRIBUTION",
+    shortDesc: "Expansive multi-tier distribution network supplying retail outlets, luxury salons, hospitality chains, and departmental counters.",
+    longDesc: "We partner with local and nationwide distributors with high profit margins, marketing collateral, point-of-sale display units, and reliable replenishments.",
+    icon: "Truck",
+    route: "/distributors",
+    highlights: ["High Distributor Margins", "Display & POS Support", "Priority Stock Allocation", "Dedicated Account Manager"]
+  },
+  {
+    id: "manufacturing",
+    title: "CUSTOM MANUFACTURING",
+    shortDesc: "Turnkey contract perfume manufacturing: from formulation and bespoke bottle design to luxury rigid box packaging and final filling.",
+    longDesc: "Transform your fragrance vision into market-ready retail products. We handle formulation, bottle tooling, gold-foil box embossing, batch compounding, and safety tests.",
+    icon: "Factory",
+    route: "/manufacturing",
+    highlights: ["Turnkey Concept-to-Shelf", "Custom Flacon & Cap Tooling", "Rigid Box & Gold Foil Stamping", "Small to High-Volume Batches"]
+  }
+];
+
+export const OUD_PRODUCTS: ProductItem[] = [
+  {
+    id: "oud-moroccan",
+    name: "Moroccan OUD",
+    category: "OUD",
+    originOrType: "Morocco (North Africa)",
+    description: "Distinctive North African amber-resinous nuance with rich balsamic undertones, delicate dry-spiced warmth, and enduring earthy sillage.",
+    details: ["Warm balsamic and spicy cedarwood nuance", "Distilled from matured aromatic wood", "Long-lasting traditional base note"],
+    image: "/images/luxury_oud.jpg",
+    badge: "Rare Origin",
+    availableOptions: ["1 Tola (12ml)", "50g Pure Wood Chips", "Bulk Wholesale (100g - 1kg)"],
+    priceNote: "Request Price / Get Wholesale Quote"
+  },
+  {
+    id: "oud-indonesian",
+    name: "Indonesian OUD",
+    category: "OUD",
+    originOrType: "Kalimantan / Papua, Indonesia",
+    description: "Deep, wild jungle-woody complexity characterized by dense smoky undertones, dark leather notes, and extraordinary projection.",
+    details: ["Wild jungle forest aroma profile", "Rich dark amber oil color", "Favored for ceremonial and high-end formulations"],
+    image: "/images/luxury_oud.jpg",
+    badge: "Top Seller",
+    availableOptions: ["1 Tola (12ml)", "Custom Bottles", "Wholesale Liters"],
+    priceNote: "Request Price / Get Wholesale Quote"
+  },
+  {
+    id: "oud-philippines",
+    name: "Philippines OUD",
+    category: "OUD",
+    originOrType: "Mindanao, Philippines",
+    description: "Celebrated among collectors for radiant golden sweetness, delicate fruity-balsamic honey notes, and deeply layered woody warmth.",
+    details: ["Rare high-grade resin content", "Fruity sweet top layer transitioning to deep wood", "Sought-after by connoisseurs"],
+    image: "/images/luxury_oud.jpg",
+    badge: "Collector's Grade",
+    availableOptions: ["Half Tola (6ml)", "1 Tola (12ml)", "Wholesale Batch"],
+    priceNote: "Request Price / Get Wholesale Quote"
+  },
+  {
+    id: "oud-indian",
+    name: "Indian OUD (Assam Dehn Al Oudh)",
+    category: "OUD",
+    originOrType: "Assam, India",
+    description: "The timeless gold standard of traditional oriental perfumery. Intense, rich animalic top notes evolving into an addictive, sweet honeyed leather and sacred woody drydown.",
+    details: ["Authentic hydro-distilled Assam agarwood", "Unrivalled 48-hour+ longevity", "Traditional Indian perfumery cornerstone"],
+    image: "/images/luxury_oud.jpg",
+    badge: "Heritage Pure",
+    availableOptions: ["3ml", "6ml", "1 Tola (12ml)", "Wholesale Kilograms"],
+    priceNote: "Request Price / Get Wholesale Quote"
+  },
+  {
+    id: "oud-bhutan",
+    name: "Bhutan OUD",
+    category: "OUD",
+    originOrType: "Himalayan Foothills, Bhutan",
+    description: "A pristine high-altitude fragrance profile offering crisp coniferous nuances, clean crystal-clear woody facets, and an uplifting sacred mountain ambiance.",
+    details: ["Himalayan wild agarwood variety", "Crisp, airy balsamic resin notes", "Ultra-rare limited annual availability"],
+    image: "/images/luxury_oud.jpg",
+    badge: "High Altitude",
+    availableOptions: ["6ml", "12ml", "Custom Order"],
+    priceNote: "Request Price / Get Wholesale Quote"
+  },
+  {
+    id: "oud-cambodia",
+    name: "Cambodia OUD",
+    category: "OUD",
+    originOrType: "Koh Kong / Pursat, Cambodia",
+    description: "World-renowned for its intoxicating dried-plum, apricot sweetness and creamy caramel-woody finish. Smooth, luxurious, and universally praised.",
+    details: ["Sweet, rich dried-apricot and fig notes", "Gentle, non-aggressive smooth character", "Prime choice for luxury royal perfumes"],
+    image: "/images/luxury_oud.jpg",
+    badge: "Signature Classic",
+    availableOptions: ["1 Tola (12ml)", "50g Chips", "Bulk Commercial Lots"],
+    priceNote: "Request Price / Get Wholesale Quote"
+  },
+  {
+    id: "oud-malaysian",
+    name: "Malaysian OUD",
+    category: "OUD",
+    originOrType: "Pahang / Terengganu, Malaysia",
+    description: "Bold and dynamic, initiating with fresh aquatic-herbaceous woody brilliance before settling into a dark, smoky, intoxicating incense heart.",
+    details: ["Dynamic multi-stage scent evolution", "Deep green-to-black resinous oil", "Outstanding durability on fabrics & skin"],
+    image: "/images/luxury_oud.jpg",
+    badge: "Distinctive",
+    availableOptions: ["1 Tola (12ml)", "High Volume Supply"],
+    priceNote: "Request Price / Get Wholesale Quote"
+  },
+  {
+    id: "oud-vietnamese",
+    name: "Vietnamese OUD",
+    category: "OUD",
+    originOrType: "Nha Trang, Vietnam",
+    description: "The pinnacle of ethereal sweetness. Famed for natural vanillic sweetness, delicate white floral touches, and sweet sacred temple smoke.",
+    details: ["Soft, radiant, and hypnotic sweetness", "Premium Kinam/Kyara family legacy", "High aesthetic prestige in global perfumery"],
+    image: "/images/luxury_oud.jpg",
+    badge: "Royal Grade",
+    availableOptions: ["Half Tola", "1 Tola", "Wholesale Lots"],
+    priceNote: "Request Price / Get Wholesale Quote"
+  },
+  {
+    id: "oud-srilankan",
+    name: "Srilankan OUD (Ceylon Agarwood)",
+    category: "OUD",
+    originOrType: "Ceylon, Sri Lanka",
+    description: "Vibrant and zesty with crushed green leaves, sweet cinnamon spice, and deeply resonant woody resin that leaves an unforgettable signature.",
+    details: ["Unique spicy-green balsamic personality", "Grown in Sri Lanka's tropical rainforest belts", "Rapidly ascending in global luxury demand"],
+    image: "/images/luxury_oud.jpg",
+    badge: "Spicy & Fresh",
+    availableOptions: ["6ml", "12ml", "Bulk Tolas"],
+    priceNote: "Request Price / Get Wholesale Quote"
+  },
+  {
+    id: "oud-thailand",
+    name: "Thailand OUD (Trat / Prachin)",
+    category: "OUD",
+    originOrType: "Trat / Prachinburi, Thailand",
+    description: "Luminous, sunny, and floral-sweet. Overflowing with golden fruit, peach blossom, and bright woody undertones, making it a crowd-pleasing luxury favourite.",
+    details: ["Bright, golden, sunny olfactory aura", "Warm floral and stone-fruit facets", "Excellent versatility for modern perfume blending"],
+    image: "/images/luxury_oud.jpg",
+    badge: "Popular Classic",
+    availableOptions: ["1 Tola (12ml)", "Commercial Liters", "Custom Private Label"],
+    priceNote: "Request Price / Get Wholesale Quote"
+  }
+];
+
+export const COSMETICS_PRODUCTS: ProductItem[] = [
+  {
+    id: "cos-fragrance-oil",
+    name: "Fragrances Oil (Attar & Concentrates)",
+    category: "Cosmetics",
+    originOrType: "Pure Concentrated Fragrance Oils",
+    description: "Exquisite 100% non-alcoholic perfume oils and attars. Blended using high-purity natural and fine aroma molecules for maximum silage and skin-safe luxury.",
+    details: ["Non-alcoholic concentrated formulation", "Over 200+ oriental, French, and bespoke profiles", "Pure oil application with crystal glass rod wand"],
+    image: "/images/attar_oil.jpg",
+    badge: "Signature Collection",
+    availableOptions: ["3ml", "6ml", "12ml Crystal Flacons", "100ml - 5L Wholesale Drums"],
+    priceNote: "Request Price / Get Wholesale Quote"
+  },
+  {
+    id: "cos-fine-perfumes",
+    name: "Fine Perfumes (Eau De Parfum)",
+    category: "Cosmetics",
+    originOrType: "Luxury Spray Perfumes",
+    description: "Handcrafted master perfumes bottled in heavy-crystal flacons with fine-mist gold sprayers. Balanced compositions delivering lasting elegance for all occasions.",
+    details: ["25% to 35% Extrait & EDP concentration", "French & Oriental fusion profiles", "Prestigious heavy glass packaging with magnetic cap"],
+    image: "/images/luxury_cosmetics.jpg",
+    badge: "Prestige Line",
+    availableOptions: ["50ml", "100ml", "Travel Atomizer (15ml)", "Wholesale Display Packs"],
+    priceNote: "Request Price / Get Wholesale Quote"
+  },
+  {
+    id: "cos-bakhoor",
+    name: "Bakhoor & Incense",
+    category: "Cosmetics",
+    originOrType: "Traditional Arabesque Incense",
+    description: "Premium natural agarwood and sandalwood chips steeped in precious oils, musk, amber, and exotic florals. Ideal for creating an atmosphere of majestic hospitality.",
+    details: ["Slow-burning natural wood base", "Infused with authentic oud and rose oils", "Perfect for homes, majlis, boutiques, and weddings"],
+    image: "/images/bakhoor_luxury.jpg",
+    badge: "Atmospheric Luxury",
+    availableOptions: ["40g Tin", "75g Luxury Jar", "Bulk 1kg Packaging"],
+    priceNote: "Request Price / Get Wholesale Quote"
+  },
+  {
+    id: "cos-air-freshener",
+    name: "Air Freshener & Ambient Sprays",
+    category: "Cosmetics",
+    originOrType: "Luxury Home & Linen Mists",
+    description: "High-performance air and linen fragrances engineered to eliminate odors and replace them with lingering notes of royal oudh, lavender, white musk, and amber.",
+    details: ["Water-based and fine alcohol mist formulas", "Safe on luxury fabrics, carpets, and drapes", "Instant high-potency fragrance dispersion"],
+    image: "/images/luxury_cosmetics.jpg",
+    badge: "Home & Hospitality",
+    availableOptions: ["300ml Spray Bottles", "500ml Refills", "Commercial Bulk Packs"],
+    priceNote: "Request Price / Get Wholesale Quote"
+  },
+  {
+    id: "cos-lotion-cream",
+    name: "Lotion & Cream (Scented Skincare)",
+    category: "Cosmetics",
+    originOrType: "Hydrating Fragrance Skincare",
+    description: "Velvety moisturizers, body creams, and body butters formulated with shea butter, vitamin E, and infused with signature BARSHIP perfume essences.",
+    details: ["Ultra-hydrating non-greasy absorption", "Signature long-lasting perfume lock technology", "Dermatologically tested and paraben-free"],
+    image: "/images/luxury_cosmetics.jpg",
+    badge: "Nourishing Radiance",
+    availableOptions: ["100ml Tube", "200ml Luxury Pump Bottle", "Private Label Bulks"],
+    priceNote: "Request Price / Get Wholesale Quote"
+  }
+];
+
+export const MANUFACTURING_SERVICES: ProductItem[] = [
+  {
+    id: "mfg-custom-perfumes",
+    name: "Custom Perfumes",
+    category: "Manufacturing",
+    originOrType: "Turnkey Olfactory Formulation",
+    description: "Create an exclusive bespoke perfume signature for your brand or enterprise. Our master evaluators craft tailor-made accords matching your target audience and price target.",
+    details: ["Original olfactory formulation & evaluation", "Stability and compatibility testing", "French, Arabic, and hybrid scent architectures"],
+    image: "/images/custom_manufacturing.jpg",
+    badge: "Bespoke Creation",
+    availableOptions: ["Minimum Order: 500 Units", "Scalable to 100,000+ Units", "Turnkey Formulation"],
+    priceNote: "Request Price / Get Wholesale Quote"
+  },
+  {
+    id: "mfg-bottle-designing",
+    name: "Custom Bottle Designing",
+    category: "Manufacturing",
+    originOrType: "Flacon Engineering & Aesthetics",
+    description: "Distinguish your perfume on the shelf with unique custom glass flacons, bespoke metallic collars, weighted zinc-alloy caps, and precision gold-plating.",
+    details: ["3D CAD modeling and prototype samples", "Frosting, color-coating, and metallic electroplating", "Custom laser engraving and silkscreen printing"],
+    image: "/images/custom_manufacturing.jpg",
+    badge: "Flacon Engineering",
+    availableOptions: ["Custom Molds", "Catalog Luxury Flacons", "Cap Customization"],
+    priceNote: "Request Price / Get Wholesale Quote"
+  },
+  {
+    id: "mfg-box-packaging",
+    name: "Custom Box Packaging",
+    category: "Manufacturing",
+    originOrType: "Luxury Presentation Boxes",
+    description: "High-grade rigid gift boxes, book-style folding cartons, hot-foil gold and copper stamping, magnetic closures, and custom EVA/velvet foam die-cuts.",
+    details: ["Premium rigid paperboard and textured specialty papers", "Foil stamping, UV spot varnish, and deep embossing", "Custom-fit protective velvet inlays"],
+    image: "/images/custom_packaging_box.jpg",
+    badge: "Luxury Cartons",
+    availableOptions: ["Rigid Setup Boxes", "Folding Cartons", "Book-Style Magnetic Boxes"],
+    priceNote: "Request Price / Get Wholesale Quote"
+  },
+  {
+    id: "mfg-custom-fragrances",
+    name: "Custom Fragrances",
+    category: "Manufacturing",
+    originOrType: "Private Label Olfactory Lines",
+    description: "Private label fragrance creation for celebrity brands, fashion houses, hotels, corporate events, and wedding favors with rapid turnaround.",
+    details: ["Complete brand alignment and market benchmarking", "Regulatory documentation & MSDS compliance", "Small-batch flexibility for premier launches"],
+    image: "/images/custom_manufacturing.jpg",
+    badge: "Private Label",
+    availableOptions: ["Pilot Batches", "Annual Retainer Manufacturing", "Contract Filling"],
+    priceNote: "Request Price / Get Wholesale Quote"
+  },
+  {
+    id: "mfg-gift-packages",
+    name: "Custom Gift Packages",
+    category: "Manufacturing",
+    originOrType: "Curated VIP Presentation Sets",
+    description: "Tailored corporate gifting, royal wedding hampers, and VIP presentation boxes containing assorted attars, luxury spray perfumes, and golden bakhoor burners.",
+    details: ["Personalized corporate brass plaques & ribbons", "Modular multi-product combinations", "Unmatched unboxing experience"],
+    image: "/images/custom_packaging_box.jpg",
+    badge: "VIP & Corporate",
+    availableOptions: ["Curated 2-piece to 5-piece Sets", "Festival Hampers", "Custom Branding"],
+    priceNote: "Request Price / Get Wholesale Quote"
+  }
+];
+
+export const ALL_PRODUCTS: ProductItem[] = [
+  ...OUD_PRODUCTS,
+  ...COSMETICS_PRODUCTS,
+  ...MANUFACTURING_SERVICES
+];
+
+export const MANUFACTURING_STEPS = [
+  { step: "01", title: "Consultation", desc: "Understanding your vision, target demographic, budget parameters, and olfactory preferences." },
+  { step: "02", title: "Fragrance Selection", desc: "Evaluating custom scent compositions, accords, top-middle-base notes, and concentration strengths." },
+  { step: "03", title: "Bottle & Packaging Design", desc: "Selecting or custom-tooling glass flacons, cap finishes, luxury rigid boxes, and gold foil layouts." },
+  { step: "04", title: "Sample Approval", desc: "Production of tangible prototypes for olfactory, spray pump, and packaging physical validation." },
+  { step: "05", title: "Production", desc: "Precision compounding, cold maceration, filtration, and automated cleanroom filling." },
+  { step: "06", title: "Packaging", desc: "Precision cap crimping, velvet box assembly, gold-stamped labeling, and protective shrink-wrapping." },
+  { step: "07", title: "Delivery", desc: "Quality-assured dispatch via domestic and international logistics channels with complete tracking." }
+];
+
+export function getWhatsAppUrl(productName?: string, category?: string): string {
+  const phone = COMPANY_DETAILS.primaryWhatsAppRaw;
+  const message = productName 
+    ? `Hello BARSHIP Fragrances,\nI am interested in ${productName}${category ? ` (${category})` : ''}.\nPlease provide product details and wholesale pricing.`
+    : `Hello BARSHIP Fragrances,\nI would like to enquire about your fragrance products, wholesale supply, and custom manufacturing.`;
+  return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+}
