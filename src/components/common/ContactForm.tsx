@@ -33,10 +33,11 @@ export const ContactForm: React.FC<ContactFormProps> = ({
   const [submittedId, setSubmittedId] = useState<string>('');
 
   const categories = [
-    'Wholesale',
-    'OUD',
-    'Cosmetics',
+    'Attar',
+    'Perfume',
+    'Others',
     'Manufacturing',
+    'Wholesale',
     'Retail',
     'Imports & Exports',
     'Distributors'

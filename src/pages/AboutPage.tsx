@@ -31,7 +31,7 @@ export const AboutPage: React.FC = () => {
                 Foundational Principles
               </span>
               <h2 className="font-cinzel text-2xl sm:text-3xl font-bold text-zinc-950">
-                Pioneering Fine Fragrances, OUD & Bespoke Manufacturing
+                Pioneering Attar, Perfume & Bespoke Manufacturing
               </h2>
               <p className="text-zinc-600 text-sm sm:text-base leading-relaxed">
                 <strong>BARSHIP FRAGRANCES</strong> operates as an integrated perfumery house in Hyderabad, Telangana, serving both individual connoisseurs and commercial business enterprises. Operating alongside our associated brands <strong>Baron Perfumes</strong> and <strong>Zohran Perfumes</strong>, our enterprise bridges centuries-old oriental distillation traditions with modern cosmetic science.
@@ -101,8 +101,8 @@ export const AboutPage: React.FC = () => {
               { title: "3. Import", desc: "Direct origin procurement of genuine agarwood chips, resins, and essences across 10+ producing nations." },
               { title: "4. Export", desc: "International air and sea freight distribution servicing Middle Eastern, European, and Asian fragrance markets." },
               { title: "5. Distribution", desc: "Organized wholesale distributor partnerships providing regional territorial sales and retailer replenishment." },
-              { title: "6. OUD", desc: "Pure, certified single-origin agarwood distillations spanning Cambodian, Indonesian, Indian, Moroccan, and other varieties." },
-              { title: "7. Cosmetics", desc: "Non-alcoholic attar oils, fine spray perfumes, bakhoor incense, ambient air sprays, and scented creams." },
+              { title: "6. Attar", desc: "Pure, certified single-origin Dehn Al Oudh and non-alcoholic concentrated perfume oils spanning Cambodian, Indian, Moroccan, and other varieties." },
+              { title: "7. Perfume & Others", desc: "Handcrafted spray perfumes (Extrait & EDP), traditional bakhoor incense, ambient air sprays, and scented body creams." },
               { title: "8. Custom Manufacturing", desc: "Turnkey formulation, bespoke bottle engineering, rigid box packaging, and private label compounding." },
             ].map((area, idx) => (
               <div key={idx} className="bg-white rounded-xl p-5 border border-zinc-200/80 shadow-xs flex flex-col justify-between">
@@ -174,10 +174,10 @@ export const AboutPage: React.FC = () => {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-end">
                 <Link
-                  to="/products"
+                  to="/attar"
                   className="gold-shimmer-btn text-zinc-950 font-bold px-6 py-3.5 rounded-xl text-xs uppercase tracking-wider text-center"
                 >
-                  Explore Our Products
+                  Explore Attars & Perfumes
                 </Link>
                 <Link
                   to="/contact"

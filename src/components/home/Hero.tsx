@@ -37,16 +37,16 @@ export const Hero: React.FC = () => {
 
             {/* Supporting Text */}
             <p className="text-base sm:text-lg text-zinc-600 leading-relaxed max-w-2xl font-sans font-normal">
-              Premium fragrances, OUD, cosmetics and customized fragrance solutions for retail, wholesale and business requirements.
+              Pure artisanal attar, luxury spray perfumes, bakhoor, and bespoke fragrance manufacturing for retail, wholesale, and export.
             </p>
 
             {/* CTAs */}
             <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
               <Link
-                to="/products"
+                to="/attar"
                 className="gold-shimmer-btn text-zinc-950 font-bold px-8 py-4 rounded-xl text-xs sm:text-sm uppercase tracking-wider shadow-md hover:shadow-xl transition-all flex items-center justify-center gap-2 border border-amber-400"
               >
-                <span>Explore Products</span>
+                <span>Explore Attar & Perfume</span>
                 <ArrowRight className="w-4 h-4 text-zinc-950" />
               </Link>
 

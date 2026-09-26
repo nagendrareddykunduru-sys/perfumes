@@ -13,7 +13,7 @@ export const AdminPreviewPage: React.FC = () => {
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
   const [newProduct, setNewProduct] = useState({
     name: '',
-    category: 'OUD' as const,
+    category: 'Attar' as const,
     originOrType: '',
     description: '',
     availableOptions: '1 Tola, 50g Chips, Wholesale'
@@ -47,7 +47,7 @@ export const AdminPreviewPage: React.FC = () => {
     setIsAddModalOpen(false);
     setNewProduct({
       name: '',
-      category: 'OUD',
+      category: 'Attar',
       originOrType: '',
       description: '',
       availableOptions: '1 Tola, 50g Chips, Wholesale'
@@ -134,7 +134,7 @@ export const AdminPreviewPage: React.FC = () => {
             <div className="bg-white p-4 rounded-xl border border-zinc-200 shadow-xs flex flex-wrap items-center justify-between gap-4">
               <div className="flex flex-wrap items-center gap-2">
                 <span className="text-xs font-semibold text-zinc-500 mr-2">Filter by:</span>
-                {['ALL', 'New', 'Contacted', 'Wholesale', 'Manufacturing', 'OUD'].map(f => (
+                {['ALL', 'New', 'Contacted', 'Attar', 'Perfume', 'Others', 'Wholesale', 'Manufacturing'].map(f => (
                   <button
                     key={f}
                     onClick={() => setEnquiryFilter(f)}
@@ -351,8 +351,9 @@ export const AdminPreviewPage: React.FC = () => {
                     onChange={(e) => setNewProduct({ ...newProduct, category: e.target.value as any })}
                     className="w-full px-3 py-2 border border-zinc-300 rounded-lg text-xs bg-white"
                   >
-                    <option value="OUD">OUD</option>
-                    <option value="Cosmetics">Cosmetics</option>
+                    <option value="Attar">Attar</option>
+                    <option value="Perfume">Perfume</option>
+                    <option value="Others">Others</option>
                     <option value="Manufacturing">Manufacturing</option>
                   </select>
                 </div>

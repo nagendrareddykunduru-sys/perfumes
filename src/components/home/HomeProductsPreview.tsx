@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { ProductCard } from '../products/ProductCard';
 import { ProductModal } from '../products/ProductModal';
-import { OUD_PRODUCTS, COSMETICS_PRODUCTS, MANUFACTURING_SERVICES } from '../../data/companyData';
+import { ATTAR_PRODUCTS, PERFUME_PRODUCTS, OTHERS_PRODUCTS, MANUFACTURING_SERVICES } from '../../data/companyData';
 import type { ProductItem } from '../../data/companyData';
 
 interface HomeProductsPreviewProps {
@@ -11,26 +11,29 @@ interface HomeProductsPreviewProps {
 }
 
 export const HomeProductsPreview: React.FC<HomeProductsPreviewProps> = ({ onOpenEnquiryModal }) => {
-  const [activeTab, setActiveTab] = useState<'OUD' | 'Cosmetics' | 'Manufacturing'>('OUD');
+  const [activeTab, setActiveTab] = useState<'Attar' | 'Perfume' | 'Others' | 'Manufacturing'>('Attar');
   const [selectedProduct, setSelectedProduct] = useState<ProductItem | null>(null);
 
   const getFilteredProducts = () => {
     switch (activeTab) {
-      case 'OUD':
-        return OUD_PRODUCTS.slice(0, 4);
-      case 'Cosmetics':
-        return COSMETICS_PRODUCTS.slice(0, 4);
+      case 'Attar':
+        return ATTAR_PRODUCTS.slice(0, 4);
+      case 'Perfume':
+        return PERFUME_PRODUCTS.slice(0, 4);
+      case 'Others':
+        return OTHERS_PRODUCTS.slice(0, 4);
       case 'Manufacturing':
         return MANUFACTURING_SERVICES.slice(0, 4);
       default:
-        return OUD_PRODUCTS.slice(0, 4);
+        return ATTAR_PRODUCTS.slice(0, 4);
     }
   };
 
   const getCategoryLink = () => {
     switch (activeTab) {
-      case 'OUD': return '/oud';
-      case 'Cosmetics': return '/cosmetics';
+      case 'Attar': return '/attar';
+      case 'Perfume': return '/perfume';
+      case 'Others': return '/others';
       case 'Manufacturing': return '/manufacturing';
     }
   };
@@ -49,34 +52,44 @@ export const HomeProductsPreview: React.FC<HomeProductsPreviewProps> = ({ onOpen
               </span>
             </div>
             <h2 className="font-cinzel text-3xl sm:text-4xl font-extrabold text-zinc-950 tracking-tight">
-              Featured Fragrances & Solutions
+              Featured Attar, Perfume & Collections
             </h2>
             <p className="mt-2 text-sm text-zinc-600 max-w-xl">
-              Select a category to preview our pure agarwood origins, cosmetics portfolio, and bespoke manufacturing services.
+              Select a category to preview our pure artisanal attars, luxury spray perfumes, bakhoor & ambient lines, or bespoke manufacturing services.
             </p>
           </div>
 
           {/* Category Tabs */}
-          <div className="flex items-center gap-2 bg-zinc-100 p-1.5 rounded-xl border border-zinc-200 self-start md:self-auto">
+          <div className="flex flex-wrap items-center gap-2 bg-zinc-100 p-1.5 rounded-xl border border-zinc-200 self-start md:self-auto">
             <button
-              onClick={() => setActiveTab('OUD')}
+              onClick={() => setActiveTab('Attar')}
               className={`px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
-                activeTab === 'OUD'
+                activeTab === 'Attar'
                   ? 'bg-zinc-950 text-amber-300 shadow-sm'
                   : 'text-zinc-600 hover:text-zinc-950'
               }`}
             >
-              OUD (10 Origins)
+              Attar
             </button>
             <button
-              onClick={() => setActiveTab('Cosmetics')}
+              onClick={() => setActiveTab('Perfume')}
               className={`px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
-                activeTab === 'Cosmetics'
+                activeTab === 'Perfume'
                   ? 'bg-zinc-950 text-amber-300 shadow-sm'
                   : 'text-zinc-600 hover:text-zinc-950'
               }`}
             >
-              Cosmetics
+              Perfume
+            </button>
+            <button
+              onClick={() => setActiveTab('Others')}
+              className={`px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
+                activeTab === 'Others'
+                  ? 'bg-zinc-950 text-amber-300 shadow-sm'
+                  : 'text-zinc-600 hover:text-zinc-950'
+              }`}
+            >
+              Others (Bakhoor & Mists)
             </button>
             <button
               onClick={() => setActiveTab('Manufacturing')}

@@ -1,29 +1,29 @@
 import React, { useState } from 'react';
-import { Sparkles, ShieldCheck, Check, ArrowRight, Globe, Layers, Award } from 'lucide-react';
+import { Sparkles, ShieldCheck, Check, ArrowRight, Droplets, Globe, Award } from 'lucide-react';
 import { ProductCard } from '../components/products/ProductCard';
 import { ProductModal } from '../components/products/ProductModal';
 import { ContactForm } from '../components/common/ContactForm';
-import { OUD_PRODUCTS, getWhatsAppUrl } from '../data/companyData';
+import { ATTAR_PRODUCTS, getWhatsAppUrl, COMPANY_DETAILS } from '../data/companyData';
 import type { ProductItem } from '../data/companyData';
 
-export const OudPage: React.FC = () => {
+export const AttarPage: React.FC = () => {
   const [modalProduct, setModalProduct] = useState<ProductItem | null>(null);
   const [enquiryProduct, setEnquiryProduct] = useState<ProductItem | null>(null);
-  const [profileFilter, setProfileFilter] = useState<'ALL' | 'Sweet & Honeyed' | 'Smoky & Deep' | 'Heritage Leathery' | 'Fresh & Coniferous'>('ALL');
+  const [filter, setFilter] = useState<'ALL' | 'Single-Origin OUD' | 'Sweet & Honeyed' | 'Smoky & Deep' | 'Connoisseur Concentrates'>('ALL');
 
-  const filteredOud = OUD_PRODUCTS.filter(item => {
-    if (profileFilter === 'ALL') return true;
-    if (profileFilter === 'Sweet & Honeyed') {
-      return ['oud-cambodia', 'oud-thailand', 'oud-philippines'].includes(item.id);
+  const filteredAttars = ATTAR_PRODUCTS.filter(item => {
+    if (filter === 'ALL') return true;
+    if (filter === 'Single-Origin OUD') {
+      return item.id.includes('oud');
     }
-    if (profileFilter === 'Smoky & Deep') {
-      return ['oud-indonesian', 'oud-malaysian', 'oud-moroccan'].includes(item.id);
+    if (filter === 'Sweet & Honeyed') {
+      return ['attar-cambodia-oud', 'attar-thailand-oud', 'attar-philippines-oud'].includes(item.id);
     }
-    if (profileFilter === 'Heritage Leathery') {
-      return ['oud-indian'].includes(item.id);
+    if (filter === 'Smoky & Deep') {
+      return ['attar-indian-oud', 'attar-indonesian-oud', 'attar-malaysian-oud', 'attar-moroccan-oud'].includes(item.id);
     }
-    if (profileFilter === 'Fresh & Coniferous') {
-      return ['oud-bhutan', 'oud-vietnamese', 'oud-srilankan'].includes(item.id);
+    if (filter === 'Connoisseur Concentrates') {
+      return ['attar-fragrance-oil', 'attar-vietnamese-oud', 'attar-bhutan-oud', 'attar-srilankan-oud'].includes(item.id);
     }
     return true;
   });
@@ -34,45 +34,46 @@ export const OudPage: React.FC = () => {
       <section className="bg-zinc-950 text-white py-16 sm:py-24 relative border-b border-amber-500/40">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-800/25 via-zinc-950 to-zinc-950" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
-          <span className="font-cinzel text-xs font-bold uppercase tracking-widest text-amber-400">
-            Heritage Distillations
-          </span>
-          <h1 className="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mt-2">
-            The Pure OUD Collection
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-400/30 text-amber-300 text-xs font-semibold uppercase tracking-widest font-cinzel mb-3">
+            <Droplets className="w-3.5 h-3.5 text-amber-400" />
+            <span>100% Non-Alcoholic Pure Concentrates</span>
+          </div>
+          <h1 className="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mt-1">
+            Artisanal Attar & Dehn Al Oudh
           </h1>
           <p className="mt-3 text-sm sm:text-base text-zinc-300 max-w-2xl mx-auto">
-            10 Sovereign Origins &bull; Artisanal Hydro-Distillations &bull; Wild Agarwood Chips &bull; Wholesale & Retail
+            Traditional Hydro-Distillations &bull; Single-Origin Agarwood Oils &bull; 10 Sovereign Origins &bull; Tolas, Bottles & Bulk Liters
           </p>
         </div>
       </section>
 
-      {/* Intro Overview & Origin Map Highlights */}
+      {/* Intro Overview */}
       <section className="py-16 bg-zinc-50 border-b border-zinc-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-7 space-y-4">
               <span className="text-xs font-bold uppercase tracking-widest font-cinzel text-amber-700">
-                Ethical Sourcing & Distinction
+                Heritage Distillation Art
               </span>
               <h2 className="font-cinzel text-2xl sm:text-3xl font-bold text-zinc-950">
-                Directly Sourced Across 10 Agarwood Regions
+                Pure Attars Extracted from Nature’s Rarest Botanicals
               </h2>
               <p className="text-zinc-600 text-sm sm:text-base leading-relaxed">
-                BARSHIP FRAGRANCES procures genuine agarwood (Aquilaria) and hydro-distilled Dehn Al Oudh directly from veteran distillers across Southeast Asia, the Indian subcontinent, and North Africa. Each terroir yields a signature aromatic fingerprint—ranging from sweet Cambodian dried fruit to deep Assam leather and ethereal Vietnamese incense smoke.
+                BARSHIP FRAGRANCES is celebrated in Hyderabad for offering authentic, unadulterated attar oils and pure Dehn Al Oudh. Hydro-distilled in traditional copper stills (deg & bhapka) as well as modern vacuum distillation units, our attars are completely free from carrier solvents, alcohol, or synthetic additives.
               </p>
-              
+
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
                 <div className="p-3 bg-white rounded-lg border border-zinc-200 text-xs">
-                  <strong className="text-zinc-900 block font-cinzel">100% Pure</strong>
-                  <span className="text-zinc-500">Unadulterated resin</span>
+                  <strong className="text-zinc-900 block font-cinzel">Alcohol-Free</strong>
+                  <span className="text-zinc-500">100% Pure oil extract</span>
                 </div>
                 <div className="p-3 bg-white rounded-lg border border-zinc-200 text-xs">
-                  <strong className="text-zinc-900 block font-cinzel">CITES Compliant</strong>
-                  <span className="text-zinc-500">Legal forestry documentation</span>
+                  <strong className="text-zinc-900 block font-cinzel">48h+ Longevity</strong>
+                  <span className="text-zinc-500">Unsurpassed sillage on skin & cloth</span>
                 </div>
                 <div className="p-3 bg-white rounded-lg border border-zinc-200 text-xs">
                   <strong className="text-zinc-900 block font-cinzel">Retail & Wholesale</strong>
-                  <span className="text-zinc-500">Tolas, Liters, & Bulk Chips</span>
+                  <span className="text-zinc-500">3ml, 6ml, 12ml & Bulk kg drums</span>
                 </div>
               </div>
             </div>
@@ -80,8 +81,8 @@ export const OudPage: React.FC = () => {
             <div className="lg:col-span-5">
               <div className="rounded-2xl overflow-hidden border border-amber-300 shadow-xl aspect-[4/3] relative">
                 <img
-                  src="/images/luxury_oud.jpg"
-                  alt="Pure Agarwood chips and crystal dropper of OUD oil"
+                  src="/images/attar_oil.jpg"
+                  alt="Prestige crystal attar bottle with gold filigree and glass wand"
                   className="w-full h-full object-cover object-center"
                 />
               </div>
@@ -90,44 +91,44 @@ export const OudPage: React.FC = () => {
         </div>
       </section>
 
-      {/* 10 OUD Origins Grid */}
+      {/* Attar Catalogue Grid */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-3xl mx-auto mb-10">
             <span className="font-cinzel text-xs font-bold uppercase tracking-widest text-amber-700">
-              Complete Global Lineup
+              The Collection
             </span>
             <h2 className="font-cinzel text-3xl sm:text-4xl font-extrabold text-zinc-950 mt-1">
-              All 10 OUD Origin Varieties
+              Explore Our Attar Lineup
             </h2>
             <p className="mt-2 text-xs sm:text-sm text-zinc-600">
-              Click any variety to view olfactory characteristics, available bottle options, or request direct wholesale and retail price quotes.
+              Filter by olfactory character or explore single-origin OUD attars from across the world.
             </p>
           </div>
 
-          {/* Scent Profile Filter Buttons */}
+          {/* Filter Pills */}
           <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
-            {(['ALL', 'Sweet & Honeyed', 'Smoky & Deep', 'Heritage Leathery', 'Fresh & Coniferous'] as const).map(p => (
+            {(['ALL', 'Single-Origin OUD', 'Sweet & Honeyed', 'Smoky & Deep', 'Connoisseur Concentrates'] as const).map(p => (
               <button
                 key={p}
-                onClick={() => setProfileFilter(p)}
+                onClick={() => setFilter(p)}
                 className={`px-4 py-2 rounded-xl text-xs font-bold tracking-wider transition-all cursor-pointer ${
-                  profileFilter === p
+                  filter === p
                     ? 'bg-zinc-950 text-amber-300 shadow-sm'
                     : 'bg-zinc-100 hover:bg-zinc-200 text-zinc-700 border border-zinc-200'
                 }`}
               >
-                {p === 'ALL' ? 'All 10 Origins' : p}
+                {p === 'ALL' ? 'All Attars & OUDs' : p}
               </button>
             ))}
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-            {filteredOud.map((oud) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {filteredAttars.map((item) => (
               <ProductCard
-                key={oud.id}
-                product={oud}
+                key={item.id}
+                product={item}
                 onSelect={(p) => setModalProduct(p)}
                 onEnquire={(p) => setEnquiryProduct(p)}
               />
@@ -137,33 +138,33 @@ export const OudPage: React.FC = () => {
         </div>
       </section>
 
-      {/* B2B Agarwood Bulk Consultation Banner */}
+      {/* Wholesale Banner */}
       <section className="py-16 bg-zinc-950 text-white border-t border-amber-500/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="space-y-2 max-w-2xl">
               <h3 className="font-cinzel text-2xl font-bold text-white">
-                Looking for Bulk Agarwood Consignments or Liters?
+                Require Bulk Attar Liters or Custom Attar Flacons?
               </h3>
               <p className="text-zinc-400 text-xs sm:text-sm">
-                We supply international fragrance houses, perfumers, and retail shops with sealed kilogram containers and analytical documentation.
+                We supply perfume brands, regional retailers, and exporters with certified pure attars in aluminum cannisters and bespoke crystal flacons.
               </p>
             </div>
 
             <div className="flex flex-wrap items-center gap-4">
               <a
-                href={getWhatsAppUrl("Bulk OUD Consignment", "Wholesale OUD")}
+                href={getWhatsAppUrl("Bulk Attar Inquiries", "Attar Wholesale")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="gold-shimmer-btn text-zinc-950 font-bold px-6 py-3.5 rounded-xl text-xs uppercase tracking-wider shadow-lg"
               >
-                Inquire for Bulk OUD on WhatsApp
+                Inquire on WhatsApp (+91 91332 33528)
               </a>
               <button
-                onClick={() => setEnquiryProduct(OUD_PRODUCTS[3])} // Default Indian OUD
+                onClick={() => setEnquiryProduct(ATTAR_PRODUCTS[0])}
                 className="px-6 py-3.5 border border-zinc-700 hover:border-amber-400 text-zinc-200 hover:text-white rounded-xl text-xs uppercase tracking-wider font-semibold transition-colors"
               >
-                Submit Custom OUD RFQ
+                Request Attar Price List
               </button>
             </div>
           </div>
@@ -190,10 +191,10 @@ export const OudPage: React.FC = () => {
               ✕
             </button>
             <ContactForm
-              initialCategory="OUD"
+              initialCategory="Attar"
               initialProduct={enquiryProduct.name}
               title={`Enquire for ${enquiryProduct.name}`}
-              subtitle="Specify your requested quantity (Tolas, Grams, Liters) to receive current batch availability and wholesale pricing."
+              subtitle="Specify your requested quantity (Tolas, Milliliters, Liters) to receive current batch availability and wholesale pricing."
             />
           </div>
         </div>

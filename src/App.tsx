@@ -8,9 +8,9 @@ import { ScrollToTop } from './components/common/ScrollToTop';
 // Pages
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
-import { ProductsPage } from './pages/ProductsPage';
-import { OudPage } from './pages/OudPage';
-import { CosmeticsPage } from './pages/CosmeticsPage';
+import { AttarPage } from './pages/AttarPage';
+import { PerfumePage } from './pages/PerfumePage';
+import { OthersPage } from './pages/OthersPage';
 import { ManufacturingPage } from './pages/ManufacturingPage';
 import { WholesalePage } from './pages/WholesalePage';
 import { RetailPage } from './pages/RetailPage';
@@ -32,9 +32,9 @@ export function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
-            <Route path="/products" element={<ProductsPage />} />
-            <Route path="/oud" element={<OudPage />} />
-            <Route path="/cosmetics" element={<CosmeticsPage />} />
+            <Route path="/attar" element={<AttarPage />} />
+            <Route path="/perfume" element={<PerfumePage />} />
+            <Route path="/others" element={<OthersPage />} />
             <Route path="/manufacturing" element={<ManufacturingPage />} />
             <Route path="/wholesale" element={<WholesalePage />} />
             <Route path="/retail" element={<RetailPage />} />
@@ -45,6 +45,10 @@ export function App() {
             <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
             <Route path="/terms-conditions" element={<TermsConditionsPage />} />
             <Route path="/admin-preview" element={<AdminPreviewPage />} />
+            {/* Fallbacks for previous paths */}
+            <Route path="/products" element={<AttarPage />} />
+            <Route path="/oud" element={<AttarPage />} />
+            <Route path="/cosmetics" element={<OthersPage />} />
             <Route path="*" element={<HomePage />} />
           </Routes>
         </main>

@@ -32,7 +32,7 @@ export const HomePage: React.FC = () => {
       {/* 2. Business Categories Section (6 Pillars) */}
       <BusinessCategories />
 
-      {/* 3. Featured Products Showcase (Tabs for OUD, Cosmetics, Manufacturing) */}
+      {/* 3. Featured Showcase (Tabs for Attar, Perfume, Others, Manufacturing) */}
       <HomeProductsPreview onOpenEnquiryModal={handleOpenEnquiry} />
 
       {/* 4. Custom Manufacturing Section with Process Roadmap */}

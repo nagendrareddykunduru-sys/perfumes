@@ -68,7 +68,7 @@ export const AboutSection: React.FC = () => {
             </p>
 
             <p className="text-zinc-600 text-sm sm:text-base leading-relaxed">
-              We specialize in the direct importation and trade of authentic <strong>OUD</strong> sourced from over 10 sovereign origins including Cambodia, Indonesia, Vietnam, Morocco, Sri Lanka, and India. Complementing our pure agarwood portfolio is an extensive range of <strong>Cosmetics, Attar Oils, Fine Spray Perfumes, Bakhoor, and Room Fresheners</strong>, alongside industrial private label manufacturing capabilities.
+              We specialize in pure concentrated <strong>Attar Oils</strong> (including single-origin Dehn Al Oudh across 10 sovereign origins), luxury fine <strong>Spray Perfumes</strong> (Extrait & Eau de Parfum), and ambient fragrance lines like <strong>Bakhoor, Home Fresheners & Curated Gift Sets</strong>, alongside turnkey private label contract manufacturing.
             </p>
 
             {/* Core Competencies Checklist */}

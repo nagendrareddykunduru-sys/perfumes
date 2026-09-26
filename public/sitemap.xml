@@ -11,17 +11,17 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://www.barship.com/products</loc>
+    <loc>https://www.barship.com/attar</loc>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://www.barship.com/oud</loc>
+    <loc>https://www.barship.com/perfume</loc>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://www.barship.com/cosmetics</loc>
+    <loc>https://www.barship.com/others</loc>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>

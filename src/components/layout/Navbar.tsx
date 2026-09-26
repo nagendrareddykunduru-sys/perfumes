@@ -31,19 +31,9 @@ export const Navbar: React.FC = () => {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { 
-      name: 'Products', 
-      path: '/products',
-      hasDropdown: true,
-      subItems: [
-        { name: 'All Products', path: '/products' },
-        { name: 'OUD Collection (10 Origins)', path: '/oud' },
-        { name: 'Cosmetics & Attars', path: '/cosmetics' },
-        { name: 'Custom Manufacturing', path: '/manufacturing' },
-      ]
-    },
-    { name: 'OUD', path: '/oud' },
-    { name: 'Cosmetics', path: '/cosmetics' },
+    { name: 'Attar', path: '/attar' },
+    { name: 'Perfume', path: '/perfume' },
+    { name: 'Others', path: '/others' },
     { name: 'Manufacturing', path: '/manufacturing' },
     { name: 'Wholesale', path: '/wholesale' },
     { name: 'Contact', path: '/contact' },
@@ -98,77 +88,28 @@ export const Navbar: React.FC = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-1 xl:space-x-3">
-              {navLinks.map((link) => {
-                if (link.hasDropdown) {
-                  return (
-                    <div 
-                      key={link.name}
-                      className="relative group"
-                      onMouseEnter={() => setProductsDropdownOpen(true)}
-                      onMouseLeave={() => setProductsDropdownOpen(false)}
-                    >
-                      <NavLink
-                        to={link.path}
-                        className={({ isActive }) =>
-                          `flex items-center gap-1 px-3 py-2 text-sm font-medium transition-colors relative tracking-wide ${
-                            isActive
-                              ? 'text-amber-700 font-semibold'
-                              : 'text-zinc-700 hover:text-amber-700'
-                          }`
-                        }
-                      >
-                        {link.name}
-                        <ChevronDown className="w-3.5 h-3.5 text-zinc-400 group-hover:text-amber-600 transition-transform group-hover:rotate-180" />
-                        {location.pathname.startsWith('/products') && (
-                          <span className="absolute bottom-0 left-3 right-3 h-[2px] bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600 rounded-full" />
-                        )}
-                      </NavLink>
-
-                      {/* Dropdown Menu */}
-                      <div 
-                        className={`absolute top-full left-0 w-64 pt-2 transition-all duration-200 ${
-                          productsDropdownOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
-                        }`}
-                      >
-                        <div className="bg-white rounded-lg shadow-xl border border-amber-200/60 p-2 py-3">
-                          {link.subItems?.map((sub) => (
-                            <Link
-                              key={sub.name}
-                              to={sub.path}
-                              className="block px-4 py-2.5 text-xs font-medium text-zinc-700 hover:text-amber-800 hover:bg-amber-50/70 rounded-md transition-colors"
-                            >
-                              {sub.name}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  );
-                }
-
-                return (
-                  <NavLink
-                    key={link.name}
-                    to={link.path}
-                    className={({ isActive }) =>
-                      `px-3 py-2 text-sm font-medium transition-colors relative tracking-wide ${
-                        isActive
-                          ? 'text-amber-700 font-semibold'
-                          : 'text-zinc-700 hover:text-amber-700'
-                      }`
-                    }
-                  >
-                    {({ isActive }) => (
-                      <>
-                        {link.name}
-                        {isActive && (
-                          <span className="absolute bottom-0 left-3 right-3 h-[2px] bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600 rounded-full" />
-                        )}
-                      </>
-                    )}
-                  </NavLink>
-                );
-              })}
+              {navLinks.map((link) => (
+                <NavLink
+                  key={link.name}
+                  to={link.path}
+                  className={({ isActive }) =>
+                    `px-3 py-2 text-sm font-medium transition-colors relative tracking-wide ${
+                      isActive
+                        ? 'text-amber-700 font-semibold'
+                        : 'text-zinc-700 hover:text-amber-700'
+                    }`
+                  }
+                >
+                  {({ isActive }) => (
+                    <>
+                      {link.name}
+                      {isActive && (
+                        <span className="absolute bottom-0 left-3 right-3 h-[2px] bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600 rounded-full" />
+                      )}
+                    </>
+                  )}
+                </NavLink>
+              ))}
             </nav>
 
             {/* Header Right Action CTA */}

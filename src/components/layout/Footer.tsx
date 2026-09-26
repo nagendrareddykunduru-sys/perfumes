@@ -33,9 +33,9 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/products" className="hover:text-amber-400 transition-colors flex items-center gap-1.5 text-xs text-zinc-300">
+                <Link to="/attar" className="hover:text-amber-400 transition-colors flex items-center gap-1.5 text-xs text-zinc-300">
                   <ArrowUpRight className="w-3 h-3 text-amber-500" />
-                  Our Products
+                  Attar & Perfume
                 </Link>
               </li>
               <li>
@@ -53,41 +53,41 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Column 2: PRODUCTS */}
+          {/* Column 2: ATTAR & PERFUME */}
           <div>
             <h4 className="font-cinzel text-sm uppercase font-bold text-amber-400 tracking-wider mb-5 flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-amber-400 inline-block" />
-              PRODUCTS
+              ATTAR & PERFUME
             </h4>
             <ul className="space-y-3 text-xs text-zinc-300">
               <li>
-                <Link to="/oud" className="hover:text-amber-400 transition-colors block">
-                  OUD (10 Global Varieties)
+                <Link to="/attar" className="hover:text-amber-400 transition-colors block">
+                  Artisanal Attar (Pure Concentrates)
                 </Link>
               </li>
               <li>
-                <Link to="/cosmetics" className="hover:text-amber-400 transition-colors block">
-                  Fine Perfumes (EDP & Extrait)
+                <Link to="/attar" className="hover:text-amber-400 transition-colors block">
+                  Single-Origin Dehn Al Oudh (10 Origins)
                 </Link>
               </li>
               <li>
-                <Link to="/cosmetics" className="hover:text-amber-400 transition-colors block">
-                  Bakhoor & Incense Chips
+                <Link to="/perfume" className="hover:text-amber-400 transition-colors block">
+                  Fine Perfumes (Extrait & EDP)
                 </Link>
               </li>
               <li>
-                <Link to="/cosmetics" className="hover:text-amber-400 transition-colors block">
-                  Air Freshener & Ambient Mists
+                <Link to="/others" className="hover:text-amber-400 transition-colors block">
+                  Royal Bakhoor & Incense Chips
                 </Link>
               </li>
               <li>
-                <Link to="/cosmetics" className="hover:text-amber-400 transition-colors block">
-                  Lotion & Scented Cream
+                <Link to="/others" className="hover:text-amber-400 transition-colors block">
+                  Luxury Air Fresheners & Mists
                 </Link>
               </li>
               <li>
-                <Link to="/cosmetics" className="hover:text-amber-400 transition-colors block">
-                  Fragrances Oil & Attar
+                <Link to="/others" className="hover:text-amber-400 transition-colors block">
+                  Scented Skincare & Creams
                 </Link>
               </li>
             </ul>

@@ -1,7 +1,7 @@
 export interface ProductItem {
   id: string;
   name: string;
-  category: 'OUD' | 'Cosmetics' | 'Manufacturing';
+  category: 'Attar' | 'Perfume' | 'Others' | 'Manufacturing';
   originOrType: string;
   description: string;
   details: string[];
@@ -26,7 +26,7 @@ export const COMPANY_DETAILS = {
   subBrand: "Baron Perfumes – Hyderabad",
   alternateBrand: "Baroon Perfumes / Zohran Perfumes",
   tagline: "Retail & Wholesale | Imports | Exports | Distribution | Custom Manufacturing",
-  heroSubtitle: "Premium fragrances, OUD, cosmetics and customized fragrance solutions for retail, wholesale and business requirements.",
+  heroSubtitle: "Premium Attars, Fine Perfumes, and customized fragrance solutions for retail, wholesale, and enterprise requirements.",
   website: "www.barship.com",
   gstin: "36ABNPH8863N2ZR",
   phones: [
@@ -70,8 +70,8 @@ export const BUSINESS_PILLARS: BusinessPillar[] = [
   {
     id: "retail",
     title: "RETAIL",
-    shortDesc: "Experience the ultimate collection of authentic OUD, artisanal attars, and luxury French and Oriental spray perfumes at our flagship boutique.",
-    longDesc: "BARSHIP offers connoisseurs and everyday fragrance lovers access to genuine, high-concentration perfumes, rare pure oud distillations, and bespoke personal scent blending.",
+    shortDesc: "Experience authentic artisanal attars, pure Dehn Al Oudh, and luxury spray perfumes at our flagship Hyderabad boutique.",
+    longDesc: "BARSHIP offers connoisseurs and everyday fragrance lovers access to genuine, high-concentration attar oils, rare pure oud distillations, and bespoke personal scent blending.",
     icon: "ShoppingBag",
     route: "/retail",
     highlights: ["Individual Customer Consultations", "Exclusive Showroom Experience", "Signature Gift Packaging", "Authentic Artisanal Blends"]
@@ -123,49 +123,25 @@ export const BUSINESS_PILLARS: BusinessPillar[] = [
   }
 ];
 
-export const OUD_PRODUCTS: ProductItem[] = [
+export const ATTAR_PRODUCTS: ProductItem[] = [
   {
-    id: "oud-moroccan",
-    name: "Moroccan OUD",
-    category: "OUD",
-    originOrType: "Morocco (North Africa)",
-    description: "Distinctive North African amber-resinous nuance with rich balsamic undertones, delicate dry-spiced warmth, and enduring earthy sillage.",
-    details: ["Warm balsamic and spicy cedarwood nuance", "Distilled from matured aromatic wood", "Long-lasting traditional base note"],
-    image: "/images/luxury_oud.jpg",
-    badge: "Rare Origin",
-    availableOptions: ["1 Tola (12ml)", "50g Pure Wood Chips", "Bulk Wholesale (100g - 1kg)"],
+    id: "attar-fragrance-oil",
+    name: "Pure Concentrated Attar Oil",
+    category: "Attar",
+    originOrType: "100% Non-Alcoholic Concentrates",
+    description: "Exquisite pure perfume oils and artisanal attars. Blended using high-purity natural and fine aroma molecules for maximum longevity and velvet skin sensation.",
+    details: ["100% Non-alcoholic concentrated formulation", "Over 200+ oriental, French, and bespoke profiles", "Pure oil application with crystal glass rod wand"],
+    image: "/images/attar_oil.jpg",
+    badge: "Signature Collection",
+    availableOptions: ["3ml", "6ml", "1 Tola (12ml)", "100ml - 5L Wholesale Drums"],
     priceNote: "Request Price / Get Wholesale Quote"
   },
   {
-    id: "oud-indonesian",
-    name: "Indonesian OUD",
-    category: "OUD",
-    originOrType: "Kalimantan / Papua, Indonesia",
-    description: "Deep, wild jungle-woody complexity characterized by dense smoky undertones, dark leather notes, and extraordinary projection.",
-    details: ["Wild jungle forest aroma profile", "Rich dark amber oil color", "Favored for ceremonial and high-end formulations"],
-    image: "/images/luxury_oud.jpg",
-    badge: "Top Seller",
-    availableOptions: ["1 Tola (12ml)", "Custom Bottles", "Wholesale Liters"],
-    priceNote: "Request Price / Get Wholesale Quote"
-  },
-  {
-    id: "oud-philippines",
-    name: "Philippines OUD",
-    category: "OUD",
-    originOrType: "Mindanao, Philippines",
-    description: "Celebrated among collectors for radiant golden sweetness, delicate fruity-balsamic honey notes, and deeply layered woody warmth.",
-    details: ["Rare high-grade resin content", "Fruity sweet top layer transitioning to deep wood", "Sought-after by connoisseurs"],
-    image: "/images/luxury_oud.jpg",
-    badge: "Collector's Grade",
-    availableOptions: ["Half Tola (6ml)", "1 Tola (12ml)", "Wholesale Batch"],
-    priceNote: "Request Price / Get Wholesale Quote"
-  },
-  {
-    id: "oud-indian",
+    id: "attar-indian-oud",
     name: "Indian OUD (Assam Dehn Al Oudh)",
-    category: "OUD",
-    originOrType: "Assam, India",
-    description: "The timeless gold standard of traditional oriental perfumery. Intense, rich animalic top notes evolving into an addictive, sweet honeyed leather and sacred woody drydown.",
+    category: "Attar",
+    originOrType: "Hydro-Distilled Assam Agarwood",
+    description: "The timeless gold standard of traditional oriental perfumery. Intense animalic top notes evolving into an addictive, sweet honeyed leather and sacred woody drydown.",
     details: ["Authentic hydro-distilled Assam agarwood", "Unrivalled 48-hour+ longevity", "Traditional Indian perfumery cornerstone"],
     image: "/images/luxury_oud.jpg",
     badge: "Heritage Pure",
@@ -173,21 +149,9 @@ export const OUD_PRODUCTS: ProductItem[] = [
     priceNote: "Request Price / Get Wholesale Quote"
   },
   {
-    id: "oud-bhutan",
-    name: "Bhutan OUD",
-    category: "OUD",
-    originOrType: "Himalayan Foothills, Bhutan",
-    description: "A pristine high-altitude fragrance profile offering crisp coniferous nuances, clean crystal-clear woody facets, and an uplifting sacred mountain ambiance.",
-    details: ["Himalayan wild agarwood variety", "Crisp, airy balsamic resin notes", "Ultra-rare limited annual availability"],
-    image: "/images/luxury_oud.jpg",
-    badge: "High Altitude",
-    availableOptions: ["6ml", "12ml", "Custom Order"],
-    priceNote: "Request Price / Get Wholesale Quote"
-  },
-  {
-    id: "oud-cambodia",
-    name: "Cambodia OUD",
-    category: "OUD",
+    id: "attar-cambodia-oud",
+    name: "Cambodian OUD Attar",
+    category: "Attar",
     originOrType: "Koh Kong / Pursat, Cambodia",
     description: "World-renowned for its intoxicating dried-plum, apricot sweetness and creamy caramel-woody finish. Smooth, luxurious, and universally praised.",
     details: ["Sweet, rich dried-apricot and fig notes", "Gentle, non-aggressive smooth character", "Prime choice for luxury royal perfumes"],
@@ -197,21 +161,33 @@ export const OUD_PRODUCTS: ProductItem[] = [
     priceNote: "Request Price / Get Wholesale Quote"
   },
   {
-    id: "oud-malaysian",
-    name: "Malaysian OUD",
-    category: "OUD",
-    originOrType: "Pahang / Terengganu, Malaysia",
-    description: "Bold and dynamic, initiating with fresh aquatic-herbaceous woody brilliance before settling into a dark, smoky, intoxicating incense heart.",
-    details: ["Dynamic multi-stage scent evolution", "Deep green-to-black resinous oil", "Outstanding durability on fabrics & skin"],
+    id: "attar-moroccan-oud",
+    name: "Moroccan OUD Attar",
+    category: "Attar",
+    originOrType: "Morocco (North Africa)",
+    description: "Distinctive North African amber-resinous nuance with rich balsamic undertones, delicate dry-spiced warmth, and enduring earthy sillage.",
+    details: ["Warm balsamic and spicy cedarwood nuance", "Distilled from matured aromatic wood", "Long-lasting traditional base note"],
     image: "/images/luxury_oud.jpg",
-    badge: "Distinctive",
-    availableOptions: ["1 Tola (12ml)", "High Volume Supply"],
+    badge: "Rare Origin",
+    availableOptions: ["1 Tola (12ml)", "50g Pure Wood Chips", "Bulk Wholesale (100g - 1kg)"],
     priceNote: "Request Price / Get Wholesale Quote"
   },
   {
-    id: "oud-vietnamese",
-    name: "Vietnamese OUD",
-    category: "OUD",
+    id: "attar-indonesian-oud",
+    name: "Indonesian OUD Attar",
+    category: "Attar",
+    originOrType: "Kalimantan / Papua, Indonesia",
+    description: "Deep, wild jungle-woody complexity characterized by dense smoky undertones, dark leather notes, and extraordinary projection.",
+    details: ["Wild jungle forest aroma profile", "Rich dark amber oil color", "Favored for ceremonial and high-end formulations"],
+    image: "/images/luxury_oud.jpg",
+    badge: "Top Seller",
+    availableOptions: ["1 Tola (12ml)", "Custom Bottles", "Wholesale Liters"],
+    priceNote: "Request Price / Get Wholesale Quote"
+  },
+  {
+    id: "attar-vietnamese-oud",
+    name: "Vietnamese OUD Attar",
+    category: "Attar",
     originOrType: "Nha Trang, Vietnam",
     description: "The pinnacle of ethereal sweetness. Famed for natural vanillic sweetness, delicate white floral touches, and sweet sacred temple smoke.",
     details: ["Soft, radiant, and hypnotic sweetness", "Premium Kinam/Kyara family legacy", "High aesthetic prestige in global perfumery"],
@@ -221,9 +197,33 @@ export const OUD_PRODUCTS: ProductItem[] = [
     priceNote: "Request Price / Get Wholesale Quote"
   },
   {
-    id: "oud-srilankan",
-    name: "Srilankan OUD (Ceylon Agarwood)",
-    category: "OUD",
+    id: "attar-malaysian-oud",
+    name: "Malaysian OUD Attar",
+    category: "Attar",
+    originOrType: "Pahang, Malaysia",
+    description: "Bold and dynamic, initiating with fresh aquatic-herbaceous woody brilliance before settling into a dark, smoky, intoxicating incense heart.",
+    details: ["Dynamic multi-stage scent evolution", "Deep green-to-black resinous oil", "Outstanding durability on fabrics & skin"],
+    image: "/images/luxury_oud.jpg",
+    badge: "Distinctive",
+    availableOptions: ["1 Tola (12ml)", "High Volume Supply"],
+    priceNote: "Request Price / Get Wholesale Quote"
+  },
+  {
+    id: "attar-philippines-oud",
+    name: "Philippines OUD Attar",
+    category: "Attar",
+    originOrType: "Mindanao, Philippines",
+    description: "Celebrated among collectors for radiant golden sweetness, delicate fruity-balsamic honey notes, and deeply layered woody warmth.",
+    details: ["Rare high-grade resin content", "Fruity sweet top layer transitioning to deep wood", "Sought-after by connoisseurs"],
+    image: "/images/luxury_oud.jpg",
+    badge: "Collector's Grade",
+    availableOptions: ["Half Tola (6ml)", "1 Tola (12ml)", "Wholesale Batch"],
+    priceNote: "Request Price / Get Wholesale Quote"
+  },
+  {
+    id: "attar-srilankan-oud",
+    name: "Srilankan (Ceylon) OUD Attar",
+    category: "Attar",
     originOrType: "Ceylon, Sri Lanka",
     description: "Vibrant and zesty with crushed green leaves, sweet cinnamon spice, and deeply resonant woody resin that leaves an unforgettable signature.",
     details: ["Unique spicy-green balsamic personality", "Grown in Sri Lanka's tropical rainforest belts", "Rapidly ascending in global luxury demand"],
@@ -233,9 +233,9 @@ export const OUD_PRODUCTS: ProductItem[] = [
     priceNote: "Request Price / Get Wholesale Quote"
   },
   {
-    id: "oud-thailand",
-    name: "Thailand OUD (Trat / Prachin)",
-    category: "OUD",
+    id: "attar-thailand-oud",
+    name: "Thailand (Trat) OUD Attar",
+    category: "Attar",
     originOrType: "Trat / Prachinburi, Thailand",
     description: "Luminous, sunny, and floral-sweet. Overflowing with golden fruit, peach blossom, and bright woody undertones, making it a crowd-pleasing luxury favourite.",
     details: ["Bright, golden, sunny olfactory aura", "Warm floral and stone-fruit facets", "Excellent versatility for modern perfume blending"],
@@ -243,40 +243,91 @@ export const OUD_PRODUCTS: ProductItem[] = [
     badge: "Popular Classic",
     availableOptions: ["1 Tola (12ml)", "Commercial Liters", "Custom Private Label"],
     priceNote: "Request Price / Get Wholesale Quote"
+  },
+  {
+    id: "attar-bhutan-oud",
+    name: "Bhutan Mountain OUD Attar",
+    category: "Attar",
+    originOrType: "Himalayan Foothills, Bhutan",
+    description: "A pristine high-altitude fragrance profile offering crisp coniferous nuances, clean crystal-clear woody facets, and an uplifting sacred mountain ambiance.",
+    details: ["Himalayan wild agarwood variety", "Crisp, airy balsamic resin notes", "Ultra-rare limited annual availability"],
+    image: "/images/luxury_oud.jpg",
+    badge: "High Altitude",
+    availableOptions: ["6ml", "12ml", "Custom Order"],
+    priceNote: "Request Price / Get Wholesale Quote"
   }
 ];
 
-export const COSMETICS_PRODUCTS: ProductItem[] = [
+export const PERFUME_PRODUCTS: ProductItem[] = [
   {
-    id: "cos-fragrance-oil",
-    name: "Fragrances Oil (Attar & Concentrates)",
-    category: "Cosmetics",
-    originOrType: "Pure Concentrated Fragrance Oils",
-    description: "Exquisite 100% non-alcoholic perfume oils and attars. Blended using high-purity natural and fine aroma molecules for maximum silage and skin-safe luxury.",
-    details: ["Non-alcoholic concentrated formulation", "Over 200+ oriental, French, and bespoke profiles", "Pure oil application with crystal glass rod wand"],
-    image: "/images/attar_oil.jpg",
-    badge: "Signature Collection",
-    availableOptions: ["3ml", "6ml", "12ml Crystal Flacons", "100ml - 5L Wholesale Drums"],
+    id: "perfume-lor-eternel",
+    name: "L'Or Éternel Extrait De Parfum",
+    category: "Perfume",
+    originOrType: "Luxury Spray Extrait (35% Conc.)",
+    description: "Our signature flagship perfume. Handcrafted with sparkling saffron and golden amber top notes, blooming Taif rose heart, and an intoxicating pure Cambodian oud base.",
+    details: ["35% Extrait de Parfum concentration", "Fine gold atomizer sprayer", "Heavy polished crystal flacon with magnetic gold cap"],
+    image: "/images/hero_fragrance.jpg",
+    badge: "Crown Flagship",
+    availableOptions: ["50ml", "100ml", "15ml Travel Atomizer"],
     priceNote: "Request Price / Get Wholesale Quote"
   },
   {
-    id: "cos-fine-perfumes",
-    name: "Fine Perfumes (Eau De Parfum)",
-    category: "Cosmetics",
-    originOrType: "Luxury Spray Perfumes",
-    description: "Handcrafted master perfumes bottled in heavy-crystal flacons with fine-mist gold sprayers. Balanced compositions delivering lasting elegance for all occasions.",
-    details: ["25% to 35% Extrait & EDP concentration", "French & Oriental fusion profiles", "Prestigious heavy glass packaging with magnetic cap"],
+    id: "perfume-oudh-majestic",
+    name: "Oudh Majestic Prestige Spray",
+    category: "Perfume",
+    originOrType: "Royal Oriental Spray Perfume",
+    description: "A majestic oriental eau de parfum uniting aged Assam agarwood, regal frankincense, warm cashmere wood, and powdery musk.",
+    details: ["28% Eau De Parfum concentration", "Exceptional 24-hour silage on fabrics", "Luxury presentation packaging with gold hot-foil borders"],
     image: "/images/luxury_cosmetics.jpg",
-    badge: "Prestige Line",
-    availableOptions: ["50ml", "100ml", "Travel Atomizer (15ml)", "Wholesale Display Packs"],
+    badge: "Royal Collection",
+    availableOptions: ["50ml", "100ml", "Wholesale Display Packs"],
     priceNote: "Request Price / Get Wholesale Quote"
   },
   {
-    id: "cos-bakhoor",
-    name: "Bakhoor & Incense",
-    category: "Cosmetics",
-    originOrType: "Traditional Arabesque Incense",
-    description: "Premium natural agarwood and sandalwood chips steeped in precious oils, musk, amber, and exotic florals. Ideal for creating an atmosphere of majestic hospitality.",
+    id: "perfume-french-aura",
+    name: "French Citrus & White Jasmine EDP",
+    category: "Perfume",
+    originOrType: "French Floral Fusion",
+    description: "Crisp Italian bergamot, Grasse jasmine petals, and white cedarwood. A modern, airy composition suitable for daytime elegance and professional boardroom presence.",
+    details: ["Fresh French fragrance profile", "Dermatologically tested and skin-friendly", "Custom bottle colorways available"],
+    image: "/images/luxury_cosmetics.jpg",
+    badge: "Contemporary",
+    availableOptions: ["50ml", "100ml", "Bulk Private Label"],
+    priceNote: "Request Price / Get Wholesale Quote"
+  },
+  {
+    id: "perfume-spicy-amber",
+    name: "Amber Noir & Smoked Leather Extrait",
+    category: "Perfume",
+    originOrType: "Bold Evening Extrait",
+    description: "Warm cardamom, roasted coffee beans, black amber, and dark Tuscan leather accords. Designed for unforgettable evening presence.",
+    details: ["Intense projection and warmth", "Hand-blended in small maturation batches", "High consumer re-order rate"],
+    image: "/images/hero_fragrance.jpg",
+    badge: "Evening Prestige",
+    availableOptions: ["50ml", "100ml", "Custom Gift Sets"],
+    priceNote: "Request Price / Get Wholesale Quote"
+  },
+  {
+    id: "perfume-custom-blend",
+    name: "Bespoke Custom Perfumes",
+    category: "Perfume",
+    originOrType: "Private Label Formulation",
+    description: "Create your personal or commercial brand signature perfume with our Hyderabad formulation team. Full control over top, middle, and base note architecture.",
+    details: ["Original olfactory formulation & evaluation", "Stability and compatibility testing", "French, Arabic, and hybrid scent architectures"],
+    image: "/images/custom_manufacturing.jpg",
+    badge: "Bespoke Creation",
+    availableOptions: ["500 to 50,000+ Units", "Turnkey Formulation", "Sample Prototypes"],
+    priceNote: "Request Price / Get Wholesale Quote"
+  }
+];
+
+export const OTHERS_PRODUCTS: ProductItem[] = [
+  {
+    id: "others-bakhoor",
+    name: "Royal Bakhoor & Incense",
+    category: "Others",
+    originOrType: "Arabesque Incense Chips",
+    description: "Slow-burning natural agarwood and sandalwood chips steeped in precious oils, musk, amber, and exotic florals. Ideal for creating an atmosphere of majestic hospitality.",
     details: ["Slow-burning natural wood base", "Infused with authentic oud and rose oils", "Perfect for homes, majlis, boutiques, and weddings"],
     image: "/images/bakhoor_luxury.jpg",
     badge: "Atmospheric Luxury",
@@ -284,10 +335,10 @@ export const COSMETICS_PRODUCTS: ProductItem[] = [
     priceNote: "Request Price / Get Wholesale Quote"
   },
   {
-    id: "cos-air-freshener",
-    name: "Air Freshener & Ambient Sprays",
-    category: "Cosmetics",
-    originOrType: "Luxury Home & Linen Mists",
+    id: "others-air-freshener",
+    name: "Luxury Air Freshener & Ambient Mists",
+    category: "Others",
+    originOrType: "Home, Hotel & Linen Fragrance",
     description: "High-performance air and linen fragrances engineered to eliminate odors and replace them with lingering notes of royal oudh, lavender, white musk, and amber.",
     details: ["Water-based and fine alcohol mist formulas", "Safe on luxury fabrics, carpets, and drapes", "Instant high-potency fragrance dispersion"],
     image: "/images/luxury_cosmetics.jpg",
@@ -296,15 +347,39 @@ export const COSMETICS_PRODUCTS: ProductItem[] = [
     priceNote: "Request Price / Get Wholesale Quote"
   },
   {
-    id: "cos-lotion-cream",
-    name: "Lotion & Cream (Scented Skincare)",
-    category: "Cosmetics",
-    originOrType: "Hydrating Fragrance Skincare",
+    id: "others-lotion-cream",
+    name: "Scented Lotion & Nourishing Cream",
+    category: "Others",
+    originOrType: "Fragrance-Enriched Skincare",
     description: "Velvety moisturizers, body creams, and body butters formulated with shea butter, vitamin E, and infused with signature BARSHIP perfume essences.",
     details: ["Ultra-hydrating non-greasy absorption", "Signature long-lasting perfume lock technology", "Dermatologically tested and paraben-free"],
     image: "/images/luxury_cosmetics.jpg",
     badge: "Nourishing Radiance",
     availableOptions: ["100ml Tube", "200ml Luxury Pump Bottle", "Private Label Bulks"],
+    priceNote: "Request Price / Get Wholesale Quote"
+  },
+  {
+    id: "others-raw-agarwood",
+    name: "Raw Agarwood Chips & Wood (Oud Wood)",
+    category: "Others",
+    originOrType: "Scented Resinous Heartwood",
+    description: "Authentic wild-harvest and cultivated resin-saturated agarwood pieces for incense burning, distillation, and connoisseur collections.",
+    details: ["Natural resin saturation grades", "Sourced from Cambodia, Indonesia, and Assam", "Pure unburned aroma upon heated charcoal"],
+    image: "/images/luxury_oud.jpg",
+    badge: "Connoisseur Grade",
+    availableOptions: ["50g", "100g", "500g", "Kilogram Consignments"],
+    priceNote: "Request Price / Get Wholesale Quote"
+  },
+  {
+    id: "others-gift-packages",
+    name: "Custom Gift Packages & Wedding Hampers",
+    category: "Others",
+    originOrType: "Curated VIP Presentation Sets",
+    description: "Tailored corporate gifting, royal wedding hampers, and VIP presentation boxes containing assorted attars, luxury spray perfumes, and golden bakhoor burners.",
+    details: ["Personalized corporate brass plaques & ribbons", "Modular multi-product combinations", "Unmatched unboxing experience"],
+    image: "/images/custom_packaging_box.jpg",
+    badge: "VIP & Corporate",
+    availableOptions: ["Curated 2-piece to 5-piece Sets", "Festival Hampers", "Custom Branding"],
     priceNote: "Request Price / Get Wholesale Quote"
   }
 ];
@@ -373,8 +448,9 @@ export const MANUFACTURING_SERVICES: ProductItem[] = [
 ];
 
 export const ALL_PRODUCTS: ProductItem[] = [
-  ...OUD_PRODUCTS,
-  ...COSMETICS_PRODUCTS,
+  ...ATTAR_PRODUCTS,
+  ...PERFUME_PRODUCTS,
+  ...OTHERS_PRODUCTS,
   ...MANUFACTURING_SERVICES
 ];
 
@@ -392,6 +468,6 @@ export function getWhatsAppUrl(productName?: string, category?: string): string 
   const phone = COMPANY_DETAILS.primaryWhatsAppRaw;
   const message = productName 
     ? `Hello BARSHIP Fragrances,\nI am interested in ${productName}${category ? ` (${category})` : ''}.\nPlease provide product details and wholesale pricing.`
-    : `Hello BARSHIP Fragrances,\nI would like to enquire about your fragrance products, wholesale supply, and custom manufacturing.`;
+    : `Hello BARSHIP Fragrances,\nI would like to enquire about your Attars, Perfumes, and custom manufacturing.`;
   return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 }
