@@ -35,11 +35,11 @@ export const ProductModal: React.FC<ProductModalProps> = ({
 
         <div className="grid grid-cols-1 md:grid-cols-2">
           {/* Product Media Column */}
-          <div className="relative aspect-[4/3] md:aspect-auto h-full min-h-[300px] bg-zinc-100">
+          <div className="relative aspect-[4/5] md:aspect-auto h-full min-h-[340px] bg-zinc-950 flex items-center justify-center overflow-hidden">
             <img
               src={product.image}
               alt={product.name}
-              className="w-full h-full object-cover object-center"
+              className={`w-full h-full ${product.category === 'Attar' ? 'object-contain p-2' : 'object-cover'} object-center`}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent md:hidden" />
             <div className="absolute bottom-4 left-4 text-white md:hidden">

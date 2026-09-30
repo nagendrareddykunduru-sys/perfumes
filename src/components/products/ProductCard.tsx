@@ -15,7 +15,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect, onE
   return (
     <div className="group bg-white rounded-xl overflow-hidden border border-zinc-200/80 hover:border-amber-400/80 transition-all duration-300 hover:shadow-xl flex flex-col justify-between relative">
       {/* Category & Badge header */}
-      <div className="relative aspect-[4/3] overflow-hidden bg-zinc-100">
+      <div className={`relative overflow-hidden bg-zinc-950 ${product.category === 'Attar' ? 'aspect-[4/5]' : 'aspect-[4/3]'}`}>
         <img
           src={product.image}
           alt={product.name}

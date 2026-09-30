@@ -1,7 +1,7 @@
 export interface ProductItem {
   id: string;
   name: string;
-  category: 'Attar' | 'Perfume' | 'Others';
+  category: 'Attar' | 'Perfume' | 'Precious Bottles' | 'Others';
   originOrType: string;
   description: string;
   details: string[];
@@ -107,136 +107,344 @@ export const BUSINESS_PILLARS: BusinessPillar[] = [
 
 export const ATTAR_PRODUCTS: ProductItem[] = [
   {
-    id: "attar-fragrance-oil",
-    name: "Pure Concentrated Attar Oil",
+    id: "attar-aseel",
+    name: "Aseel Roll-On Perfume",
     category: "Attar",
-    originOrType: "100% Non-Alcoholic Concentrates",
-    description: "Exquisite pure perfume oils and artisanal attars. Blended using high-purity natural and fine aroma molecules for maximum longevity and velvet skin sensation.",
-    details: ["100% Non-alcoholic concentrated formulation", "Over 200+ oriental, French, and bespoke profiles", "Pure oil application with crystal glass rod wand"],
-    image: "/images/attar_oil.jpg",
-    badge: "Signature Collection",
-    availableOptions: ["3ml", "6ml", "1 Tola (12ml)", "100ml - 5L Wholesale Drums"],
-    priceNote: "Request Price / Get Wholesale Quote"
+    originOrType: "Roll-On Concentrated Attar (6ml)",
+    description: "An opulent golden oriental attar featuring warm amber, refined agarwood nuances, delicate florals, and lingering spicy musk. Formulated with 100% non-alcoholic pure oil for lasting elegance.",
+    details: [
+      "100% Non-Alcoholic concentrated roll-on perfume oil",
+      "Pocket-sized luxury flacon with gold cap and custom presentation box",
+      "Unsurpassed 24h-48h longevity and projection on skin and fabrics",
+      "Zohrain Perfumes authentic signature oriental formulation"
+    ],
+    image: "/images/attars/aseel.jpg",
+    badge: "Best Seller",
+    availableOptions: ["6ml Roll-on Bottle", "Individual Box Pack", "Pack of 6 / 12", "Wholesale Master Cartons"],
+    priceNote: "Request Price / Wholesale Quote"
   },
   {
-    id: "attar-indian-oud",
-    name: "Indian OUD (Assam Dehn Al Oudh)",
+    id: "attar-black-rose",
+    name: "Black Rose Roll-On Perfume",
     category: "Attar",
-    originOrType: "Hydro-Distilled Assam Agarwood",
-    description: "The timeless gold standard of traditional oriental perfumery. Intense animalic top notes evolving into an addictive, sweet honeyed leather and sacred woody drydown.",
-    details: ["Authentic hydro-distilled Assam agarwood", "Unrivalled 48-hour+ longevity", "Traditional Indian perfumery cornerstone"],
-    image: "/images/luxury_oud.jpg",
-    badge: "Heritage Pure",
-    availableOptions: ["3ml", "6ml", "1 Tola (12ml)", "Wholesale Kilograms"],
-    priceNote: "Request Price / Get Wholesale Quote"
+    originOrType: "Roll-On Concentrated Attar (6ml)",
+    description: "An intoxicating union of midnight dark rose, smoky agarwood, crushed black petals, and sensual velvety amber. A deep, mysterious evening fragrance with commanding sillage.",
+    details: [
+      "6ml pure concentrated roll-on perfume oil",
+      "Velvet midnight rose, dark amber, and woody musk accords",
+      "Alcohol-free, skin-nourishing pure essential oil blend",
+      "Premium dark purple & gold foiled presentation box"
+    ],
+    image: "/images/attars/black_rose.jpg",
+    badge: "Dark Floral",
+    availableOptions: ["6ml Roll-on Bottle", "Individual Box Pack", "Wholesale Pack (12 Units)", "Bulk Commercial Supply"],
+    priceNote: "Request Price / Wholesale Quote"
   },
   {
-    id: "attar-cambodia-oud",
-    name: "Cambodian OUD Attar",
+    id: "attar-sultan",
+    name: "Sultan Roll-On Perfume",
     category: "Attar",
-    originOrType: "Koh Kong / Pursat, Cambodia",
-    description: "World-renowned for its intoxicating dried-plum, apricot sweetness and creamy caramel-woody finish. Smooth, luxurious, and universally praised.",
-    details: ["Sweet, rich dried-apricot and fig notes", "Gentle, non-aggressive smooth character", "Prime choice for luxury royal perfumes"],
-    image: "/images/luxury_oud.jpg",
-    badge: "Signature Classic",
-    availableOptions: ["1 Tola (12ml)", "50g Chips", "Bulk Commercial Lots"],
-    priceNote: "Request Price / Get Wholesale Quote"
+    originOrType: "Roll-On Concentrated Attar (6ml)",
+    description: "A regal attar crafted for majesty. Unveils bold oriental spices, noble agarwood, golden saffron, and a rich balsamic woody heart that commands admiration.",
+    details: [
+      "6ml high-concentration pure attar oil roll-on",
+      "Opulent royal blend with deep oriental woody warmth",
+      "Embossed burgundy & gold filigree luxury packaging",
+      "Exceptional sillage and persistent projection"
+    ],
+    image: "/images/attars/sultan.jpg",
+    badge: "Royal Signature",
+    availableOptions: ["6ml Roll-on Bottle", "Luxury Gift Box", "Wholesale Dozen Pack", "Bulk Export Orders"],
+    priceNote: "Request Price / Wholesale Quote"
   },
   {
-    id: "attar-moroccan-oud",
-    name: "Moroccan OUD Attar",
+    id: "attar-kiswa",
+    name: "Kiswa Roll-On Perfume",
     category: "Attar",
-    originOrType: "Morocco (North Africa)",
-    description: "Distinctive North African amber-resinous nuance with rich balsamic undertones, delicate dry-spiced warmth, and enduring earthy sillage.",
-    details: ["Warm balsamic and spicy cedarwood nuance", "Distilled from matured aromatic wood", "Long-lasting traditional base note"],
-    image: "/images/luxury_oud.jpg",
-    badge: "Rare Origin",
-    availableOptions: ["1 Tola (12ml)", "50g Pure Wood Chips", "Bulk Wholesale (100g - 1kg)"],
-    priceNote: "Request Price / Get Wholesale Quote"
+    originOrType: "Roll-On Concentrated Attar (6ml)",
+    description: "Capturing the sacred and spiritual aura of the Holy Kaaba's Kiswa cloth. A tranquil blend of aged black oudh, white musk, amber, and Taif rose that soothes the spirit.",
+    details: [
+      "100% Non-Alcoholic sacred spiritual formulation",
+      "Sacred black & gold motif heritage packaging",
+      "Pure black oudh, heavenly musk, and Taif rose notes",
+      "Cherished for daily wear, spiritual gatherings, and prayer"
+    ],
+    image: "/images/attars/kiswa.jpg",
+    badge: "Sacred Edition",
+    availableOptions: ["6ml Roll-on Bottle", "Heritage Box Pack", "Pack of 6 / 12", "Export & Wholesale Consignments"],
+    priceNote: "Request Price / Wholesale Quote"
   },
   {
-    id: "attar-indonesian-oud",
-    name: "Indonesian OUD Attar",
+    id: "attar-jannat-al-firdous",
+    name: "Jannat Al Firdous Roll-On Perfume",
     category: "Attar",
-    originOrType: "Kalimantan / Papua, Indonesia",
-    description: "Deep, wild jungle-woody complexity characterized by dense smoky undertones, dark leather notes, and extraordinary projection.",
-    details: ["Wild jungle forest aroma profile", "Rich dark amber oil color", "Favored for ceremonial and high-end formulations"],
-    image: "/images/luxury_oud.jpg",
-    badge: "Top Seller",
-    availableOptions: ["1 Tola (12ml)", "Custom Bottles", "Wholesale Liters"],
-    priceNote: "Request Price / Get Wholesale Quote"
+    originOrType: "Roll-On Concentrated Attar (6ml)",
+    description: "The quintessential garden of paradise. A revitalizing burst of blooming white jasmine, wild lotus, green garden herbs, neroli, and celestial crystalline musk.",
+    details: [
+      "6ml pure concentrated roll-on perfume oil",
+      "Radiant floral bouquet: White jasmine, neroli, and fresh herbs",
+      "Cooling, invigorating, and naturally uplifting aroma",
+      "Vibrant emerald green botanical box with polished gold cap"
+    ],
+    image: "/images/attars/jannat_al_firdous.jpg",
+    badge: "Timeless Classic",
+    availableOptions: ["6ml Roll-on Bottle", "Signature Box Pack", "Wholesale Cartons", "Custom Multi-packs"],
+    priceNote: "Request Price / Wholesale Quote"
   },
   {
-    id: "attar-vietnamese-oud",
-    name: "Vietnamese OUD Attar",
+    id: "attar-musk-rijali",
+    name: "Musk Rijali Roll-On Perfume",
     category: "Attar",
-    originOrType: "Nha Trang, Vietnam",
-    description: "The pinnacle of ethereal sweetness. Famed for natural vanillic sweetness, delicate white floral touches, and sweet sacred temple smoke.",
-    details: ["Soft, radiant, and hypnotic sweetness", "Premium Kinam/Kyara family legacy", "High aesthetic prestige in global perfumery"],
-    image: "/images/luxury_oud.jpg",
-    badge: "Royal Grade",
-    availableOptions: ["Half Tola", "1 Tola", "Wholesale Lots"],
-    priceNote: "Request Price / Get Wholesale Quote"
+    originOrType: "Roll-On Concentrated Attar (6ml)",
+    description: "A sophisticated masculine and regal white musk composed with warm sandalwood, soft spicy nuances, and refined agarwood undertones. A clean, commanding classic for all occasions.",
+    details: [
+      "6ml pure concentrated roll-on perfume oil",
+      "Regal masculine musk, creamy sandalwood & warm oud facets",
+      "100% Non-Alcoholic, long-lasting personal projection",
+      "Elegantly packaged in an ivory & gold Arabic calligraphic box"
+    ],
+    image: "/images/attars/musk_rijali.jpg",
+    badge: "Signature Musk",
+    availableOptions: ["6ml Roll-on Bottle", "Individual Box Pack", "Pack of 6 / 12", "Wholesale Master Cartons"],
+    priceNote: "Request Price / Wholesale Quote"
   },
   {
-    id: "attar-malaysian-oud",
-    name: "Malaysian OUD Attar",
+    id: "attar-musk-al-tahara",
+    name: "Musk Al Tahara Roll-On Perfume",
     category: "Attar",
-    originOrType: "Pahang, Malaysia",
-    description: "Bold and dynamic, initiating with fresh aquatic-herbaceous woody brilliance before settling into a dark, smoky, intoxicating incense heart.",
-    details: ["Dynamic multi-stage scent evolution", "Deep green-to-black resinous oil", "Outstanding durability on fabrics & skin"],
-    image: "/images/luxury_oud.jpg",
-    badge: "Distinctive",
-    availableOptions: ["1 Tola (12ml)", "High Volume Supply"],
-    priceNote: "Request Price / Get Wholesale Quote"
+    originOrType: "Roll-On Concentrated Attar (6ml)",
+    description: "The sacred essence of purity. A velvety, thick white cream musk known for its gentle powdery softness, delicate white floral hints, and soothing sacred warmth.",
+    details: [
+      "6ml high-purity non-alcoholic concentrated roll-on",
+      "Iconic purity scent: Powdery white musk & lotus blossom",
+      "Deeply calming, fresh, and soothing skin-feel",
+      "Embossed luxury white presentation box with golden deer arch motif"
+    ],
+    image: "/images/attars/musk_al_tahara.jpg",
+    badge: "Purity & Sacred",
+    availableOptions: ["6ml Roll-on Bottle", "Individual Box Pack", "Pack of 6 / 12", "Wholesale Master Cartons"],
+    priceNote: "Request Price / Wholesale Quote"
   },
   {
-    id: "attar-philippines-oud",
-    name: "Philippines OUD Attar",
+    id: "attar-persian-gulab",
+    name: "Persian Gulab Roll-On Perfume",
     category: "Attar",
-    originOrType: "Mindanao, Philippines",
-    description: "Celebrated among collectors for radiant golden sweetness, delicate fruity-balsamic honey notes, and deeply layered woody warmth.",
-    details: ["Rare high-grade resin content", "Fruity sweet top layer transitioning to deep wood", "Sought-after by connoisseurs"],
-    image: "/images/luxury_oud.jpg",
-    badge: "Collector's Grade",
-    availableOptions: ["Half Tola (6ml)", "1 Tola (12ml)", "Wholesale Batch"],
-    priceNote: "Request Price / Get Wholesale Quote"
+    originOrType: "Roll-On Concentrated Attar (6ml)",
+    description: "Inspired by the celestial royal gardens of Persia. A lavish distillation of velvety Damask red roses, sweet saffron nectar, and warm golden amber that blossoms with intoxicating romance.",
+    details: [
+      "6ml concentrated floral roll-on perfume oil",
+      "Pure Persian Damascena rose, sparkling saffron & warm amber",
+      "Rich, authentic floral sillage that blooms exquisitely on skin",
+      "Enchanting royal garden star-lit presentation packaging"
+    ],
+    image: "/images/attars/persian_gulab.jpg",
+    badge: "Royal Rose",
+    availableOptions: ["6ml Roll-on Bottle", "Signature Box Pack", "Wholesale Dozen Pack", "Export Consignments"],
+    priceNote: "Request Price / Wholesale Quote"
   },
   {
-    id: "attar-srilankan-oud",
-    name: "Srilankan (Ceylon) OUD Attar",
+    id: "attar-majmoua",
+    name: "Majmoua Roll-On Perfume",
     category: "Attar",
-    originOrType: "Ceylon, Sri Lanka",
-    description: "Vibrant and zesty with crushed green leaves, sweet cinnamon spice, and deeply resonant woody resin that leaves an unforgettable signature.",
-    details: ["Unique spicy-green balsamic personality", "Grown in Sri Lanka's tropical rainforest belts", "Rapidly ascending in global luxury demand"],
-    image: "/images/luxury_oud.jpg",
-    badge: "Spicy & Fresh",
-    availableOptions: ["6ml", "12ml", "Bulk Tolas"],
-    priceNote: "Request Price / Get Wholesale Quote"
+    originOrType: "Roll-On Concentrated Attar (6ml)",
+    description: "The timeless heritage masterpiece of Indian attar perfumery. A masterfully aged bouquet uniting pure vetiver (Khus), kewra, warm earthen mitti, sandalwood, and noble agarwood for a deep, grounding, and spiritually centering essence.",
+    details: [
+      "6ml pure concentrated roll-on perfume oil",
+      "Traditional Indian heritage blend: Vetiver, Kewra, Mitti & Sandalwood",
+      "100% Non-Alcoholic, cooling and deeply calming sillage",
+      "Signature metallic purple & bronze presentation packaging"
+    ],
+    image: "/images/attars/majmoua.jpg",
+    badge: "Heritage Classic",
+    availableOptions: ["6ml Roll-on Bottle", "Individual Box Pack", "Pack of 6 / 12", "Wholesale Master Cartons"],
+    priceNote: "Request Price / Wholesale Quote"
   },
   {
-    id: "attar-thailand-oud",
-    name: "Thailand (Trat) OUD Attar",
+    id: "attar-bloom-in-heaven",
+    name: "Bloom in Heaven Roll-On Perfume",
     category: "Attar",
-    originOrType: "Trat / Prachinburi, Thailand",
-    description: "Luminous, sunny, and floral-sweet. Overflowing with golden fruit, peach blossom, and bright woody undertones, making it a crowd-pleasing luxury favourite.",
-    details: ["Bright, golden, sunny olfactory aura", "Warm floral and stone-fruit facets", "Excellent versatility for modern perfume blending"],
-    image: "/images/luxury_oud.jpg",
-    badge: "Popular Classic",
-    availableOptions: ["1 Tola (12ml)", "Commercial Liters", "Custom Private Label"],
-    priceNote: "Request Price / Get Wholesale Quote"
+    originOrType: "Roll-On Concentrated Attar (6ml)",
+    description: "An ethereal moonlight garden fragrance. Celestial night-blooming jasmine, royal white tuberose, luminous citrus blossoms, and starry musks evoke a majestic nocturnal palace bathed in full moonlight.",
+    details: [
+      "6ml pure concentrated roll-on perfume oil",
+      "Night-blooming jasmine, white tuberose & ethereal crystalline musk",
+      "Mesmerizing long-lasting sillage with romantic aura",
+      "Designer midnight blue box featuring moonlit palace artwork"
+    ],
+    image: "/images/attars/bloom_in_heaven.jpg",
+    badge: "Nocturnal Floral",
+    availableOptions: ["6ml Roll-on Bottle", "Individual Box Pack", "Pack of 6 / 12", "Wholesale Master Cartons"],
+    priceNote: "Request Price / Wholesale Quote"
   },
   {
-    id: "attar-bhutan-oud",
-    name: "Bhutan Mountain OUD Attar",
+    id: "attar-hawas",
+    name: "Hawas Roll-On Perfume",
     category: "Attar",
-    originOrType: "Himalayan Foothills, Bhutan",
-    description: "A pristine high-altitude fragrance profile offering crisp coniferous nuances, clean crystal-clear woody facets, and an uplifting sacred mountain ambiance.",
-    details: ["Himalayan wild agarwood variety", "Crisp, airy balsamic resin notes", "Ultra-rare limited annual availability"],
-    image: "/images/luxury_oud.jpg",
-    badge: "High Altitude",
-    availableOptions: ["6ml", "12ml", "Custom Order"],
-    priceNote: "Request Price / Get Wholesale Quote"
+    originOrType: "Roll-On Concentrated Attar (6ml)",
+    description: "An intoxicating, magnetic fusion of fresh aquatic breeze, crisp Italian bergamot, violet leaves, spicy cinnamon, and deep ambergris woods. Contemporary, energetic, and irresistibly charismatic.",
+    details: [
+      "6ml pure concentrated roll-on perfume oil",
+      "Fresh aquatic, violet, crisp citrus & warm ambergris accords",
+      "High-projection modern scent engineered for all-day allure",
+      "Vibrant royal purple presentation box with gold calligraphic script"
+    ],
+    image: "/images/attars/hawas.jpg",
+    badge: "Magnetic Allure",
+    availableOptions: ["6ml Roll-on Bottle", "Individual Box Pack", "Pack of 6 / 12", "Wholesale Master Cartons"],
+    priceNote: "Request Price / Wholesale Quote"
+  },
+  {
+    id: "attar-shanaya",
+    name: "Shanaya Roll-On Perfume",
+    category: "Attar",
+    originOrType: "Roll-On Concentrated Attar (6ml)",
+    description: "A luxurious, feminine oriental enchantment. Ripe dark berries, blooming Arabian orchid, cashmere wood, sweet bourbon vanilla, and golden caramel musk wrapped in royal velvet.",
+    details: [
+      "6ml pure concentrated roll-on perfume oil",
+      "Sensual orchid, dark berries, creamy vanilla & cashmere musk",
+      "Warm, sweet, and lavishly feminine oriental trail",
+      "Luxury deep violet & gold embossed packaging"
+    ],
+    image: "/images/attars/shanaya.jpg",
+    badge: "Luxury Velvet",
+    availableOptions: ["6ml Roll-on Bottle", "Individual Box Pack", "Pack of 6 / 12", "Wholesale Master Cartons"],
+    priceNote: "Request Price / Wholesale Quote"
+  },
+  {
+    id: "attar-hurram",
+    name: "Hurram Roll-On Perfume",
+    category: "Attar",
+    originOrType: "Roll-On Concentrated Attar (6ml)",
+    description: "A powerful, commanding oriental fragrance inspired by the golden desert sunset. Rich smoky leather, golden amber, warm Arabian saffron, and persistent woody spices create an unforgettable aura of strength and nobility.",
+    details: [
+      "6ml concentrated roll-on perfume oil",
+      "Rich & powerful aroma profile: Smoky leather, saffron & amber",
+      "Engineered for intense sillage and prolonged longevity",
+      "Distinctive golden desert sunset packaging with gold cap"
+    ],
+    image: "/images/attars/hurram.jpg",
+    badge: "Powerful Aroma",
+    availableOptions: ["6ml Roll-on Bottle", "Individual Box Pack", "Pack of 6 / 12", "Wholesale Master Cartons"],
+    priceNote: "Request Price / Wholesale Quote"
+  },
+  {
+    id: "attar-dien-oud",
+    name: "Dien Oud Roll-On Perfume",
+    category: "Attar",
+    originOrType: "Roll-On Concentrated Attar (6ml)",
+    description: "Pure Dehn Al Oudh essence captured in a roll-on flacon. Deep, aged agarwood heart with intense resinous smoke, warm leather, earthy balsamic tones, and rich sweet woody nuances.",
+    details: [
+      "6ml pure concentrated Dehn Al Oudh roll-on oil",
+      "Aged agarwood resin, earthy balsamic & dark leather notes",
+      "100% Non-Alcoholic, exceptional 48h+ longevity",
+      "Imperial purple and gold foil framed presentation packaging"
+    ],
+    image: "/images/attars/dien_oud.jpg",
+    badge: "Pure Dehn Oudh",
+    availableOptions: ["6ml Roll-on Bottle", "Individual Box Pack", "Pack of 6 / 12", "Wholesale Master Cartons"],
+    priceNote: "Request Price / Wholesale Quote"
+  },
+  {
+    id: "attar-jasmine",
+    name: "Jasmine Roll-On Perfume",
+    category: "Attar",
+    originOrType: "Roll-On Concentrated Attar (6ml)",
+    description: "Pure, intoxicating Sambac and royal white Jasmine. Freshly picked dew-kissed petals, subtle sweet green leaves, and soft powdery white musk that radiate pure romance and natural radiance.",
+    details: [
+      "6ml concentrated pure floral perfume oil",
+      "Fresh blooming Arabian jasmine & Sambac flower essence",
+      "Sweet, cooling, and enchanting natural floral trail",
+      "Emerald green botanical box with polished gold roll-on cap"
+    ],
+    image: "/images/attars/jasmine.jpg",
+    badge: "Pure Floral",
+    availableOptions: ["6ml Roll-on Bottle", "Individual Box Pack", "Pack of 6 / 12", "Wholesale Master Cartons"],
+    priceNote: "Request Price / Wholesale Quote"
+  },
+  {
+    id: "attar-kashmiri-oud",
+    name: "Kashmiri Oud Roll-On Perfume",
+    category: "Attar",
+    originOrType: "Roll-On Concentrated Attar (6ml)",
+    description: "A crisp, majestic high-altitude mountain oud inspired by the snow-capped Himalayan valleys of Kashmir. Pristine coniferous pine needles, cool mountain air, sweet saffron threads, and aged agarwood resin create an invigorating and noble warmth.",
+    details: [
+      "6ml concentrated pure roll-on perfume oil",
+      "Crisp mountain pine, Kashmiri saffron & resinous agarwood",
+      "Refreshing cooling opening transitioning into comforting warmth",
+      "Scenic snow-clad Himalayan mountain landscape packaging with gold cap"
+    ],
+    image: "/images/attars/kashmiri_oud.jpg",
+    badge: "Himalayan Noble",
+    availableOptions: ["6ml Roll-on Bottle", "Individual Box Pack", "Pack of 6 / 12", "Wholesale Master Cartons"],
+    priceNote: "Request Price / Wholesale Quote"
+  },
+  {
+    id: "attar-white-oud",
+    name: "White Oud Roll-On Perfume",
+    category: "Attar",
+    originOrType: "Roll-On Concentrated Attar (6ml)",
+    description: "An ethereal, contemporary interpretation of oriental agarwood. Luminous white amber, soft powdery musk, delicate floral nuances, and smooth creamy agarwood without sharp animalic notes. Elegant, clean, and universally flattering.",
+    details: [
+      "6ml pure concentrated roll-on perfume oil",
+      "Smooth white agarwood, sheer amber & crystalline musk",
+      "Subtle, sophisticated, and perfect for modern daily wear",
+      "Pastel lavender-lilac packaging with gold hot-stamped typography"
+    ],
+    image: "/images/attars/white_oud.jpg",
+    badge: "Contemporary Pure",
+    availableOptions: ["6ml Roll-on Bottle", "Individual Box Pack", "Pack of 6 / 12", "Wholesale Master Cartons"],
+    priceNote: "Request Price / Wholesale Quote"
+  },
+  {
+    id: "attar-gucci-flora",
+    name: "Gucci Flora Roll-On Perfume",
+    category: "Attar",
+    originOrType: "Roll-On Concentrated Attar (6ml)",
+    description: "A luxurious, French-inspired designer floral attar. Blooming pink peonies, velvety garden rose petals, osmanthus blossom, and warm pink pepper grounded by sweet sandalwood and patchouli musk. Radiantly youthful and opulent.",
+    details: [
+      "6ml concentrated roll-on designer perfume oil",
+      "Blooming pink peonies, garden rose, osmanthus & pink pepper",
+      "100% Non-Alcoholic, long-lasting romantic floral projection",
+      "Rich plum-purple packaging with vibrant blooming pink peony artwork"
+    ],
+    image: "/images/attars/gucci_flora.jpg",
+    badge: "Designer Floral",
+    availableOptions: ["6ml Roll-on Bottle", "Individual Box Pack", "Pack of 6 / 12", "Wholesale Master Cartons"],
+    priceNote: "Request Price / Wholesale Quote"
+  },
+  {
+    id: "attar-black-oud",
+    name: "Black Oud Roll-On Perfume",
+    category: "Attar",
+    originOrType: "Roll-On Concentrated Attar (6ml)",
+    description: "A deep, dark hypnotic masterpiece. Concentrated black Cambodian agarwood, charred birch tar smoke, dark leather, labdanum resin, and midnight patchouli. Seductive, brooding, and intensely long-lasting.",
+    details: [
+      "6ml concentrated roll-on pure perfume oil",
+      "Dark Cambodian agarwood, leather, smoky birch & amber resin",
+      "100% Non-Alcoholic, immense sillage and projection",
+      "Matte black & gold hot-stamped box featuring traditional mabkhara incense burner"
+    ],
+    image: "/images/attars/black_oud.jpg",
+    badge: "Dark Intense",
+    availableOptions: ["6ml Roll-on Bottle", "Individual Box Pack", "Pack of 6 / 12", "Wholesale Master Cartons"],
+    priceNote: "Request Price / Wholesale Quote"
+  },
+  {
+    id: "attar-shamama",
+    name: "Shamama Roll-On Perfume",
+    category: "Attar",
+    originOrType: "Roll-On Concentrated Attar (6ml)",
+    description: "The legendary Shamamatul Amber heritage formulation. A secret recipe of over 40 rare herbs, medicinal roots, spices, saffron, amber, and aged sandalwood distilled over weeks in traditional degs. Earthy, warm, spicy, and deeply meditative.",
+    details: [
+      "6ml pure concentrated artisanal attar roll-on",
+      "Traditional Shamamatul Amber blend: 40+ exotic herbs, saffron & sandalwood",
+      "Intensely grounding, warm balsamic, and soothing spiritual aroma",
+      "Regal black & gold presentation box with crystal tola flacon crest"
+    ],
+    image: "/images/attars/shamama.jpg",
+    badge: "Heritage Herbal",
+    availableOptions: ["6ml Roll-on Bottle", "Individual Box Pack", "Pack of 6 / 12", "Wholesale Master Cartons"],
+    priceNote: "Request Price / Wholesale Quote"
   }
 ];
 
@@ -299,6 +507,118 @@ export const PERFUME_PRODUCTS: ProductItem[] = [
     image: "/images/custom_manufacturing.jpg",
     badge: "Bespoke Creation",
     availableOptions: ["500 to 50,000+ Units", "Turnkey Formulation", "Sample Prototypes"],
+    priceNote: "Request Price / Get Wholesale Quote"
+  }
+];
+
+export const BOTTLE_PRODUCTS: ProductItem[] = [
+  {
+    id: "bottle-gemstone-crystal-flacons",
+    name: "Royal Gemstone Crystal Attar Flacons (Emerald, Sapphire & Gold)",
+    category: "Precious Bottles",
+    originOrType: "Faceted K9 Optical Crystal & Jeweled Finials",
+    description: "Heavy cut-crystal flacons crowned with diamond-faceted jewel stoppers and golden filigree collars. Includes Emerald Green, Sapphire Blue, and Royal 24K Gold lattice designs with precision dipstick glass applicators.",
+    details: [
+      "Precision cut optical crystal flacons with refractive facets",
+      "Faceted emerald green, sapphire blue, and crystal clear jewel stoppers",
+      "Solid brass gold electroplated airtight screw collars",
+      "Airtight glass dipstick wands for attar and pure dehn al oudh",
+      "Available in 6ml (1/2 Tola) & 12ml (1 Tola) capacities"
+    ],
+    image: "/images/bottles/royal_gemstone_crystal_flacons.jpg",
+    badge: "Showcase Collection",
+    availableOptions: ["Emerald Green Jewel (6ml / 12ml)", "Sapphire Blue Jewel (6ml / 12ml)", "Gold Filigree Crown (6ml / 12ml)", "Set of 3 Collector's Display"],
+    priceNote: "Request Price / Get Wholesale Quote"
+  },
+  {
+    id: "bottle-wholesale-aluminum-canisters",
+    name: "Pure Attar & Essential Oil Wholesale Aluminum Canisters",
+    category: "Precious Bottles",
+    originOrType: "Export-Grade Seamless Aluminum",
+    description: "Heavy-gauge brushed seamless aluminum storage and shipping canisters with leak-proof tamper-evident threaded closures. Specially engineered to protect pure perfume oils, oud extracts, and essential oils from UV degradation and oxidation.",
+    details: [
+      "Cosmetic & export grade pure anodized seamless aluminum",
+      "Hermetic dual-seal leak-proof threaded white plugs and safety caps",
+      "100% light-blocking UV defense for delicate botanical oils & oudh",
+      "Meets international air cargo & courier transport standards",
+      "Capacities: 100ml, 250ml, 500ml, and 1000ml (1 Litre)"
+    ],
+    image: "/images/bottles/wholesale_aluminum_canisters.jpg",
+    badge: "Bulk Export Grade",
+    availableOptions: ["100ml Canister", "250ml Canister", "500ml Canister", "1000ml (1 Litre) Canister", "Master Carton Pack"],
+    priceNote: "Request Price / Get Wholesale Quote"
+  },
+  {
+    id: "bottle-vintage-butterfly-floral",
+    name: "Imperial Enamelled Butterfly & Vintage Floral Crystal Flacons",
+    category: "Precious Bottles",
+    originOrType: "Artisanal Jeweled Glass & Hand-Painted Enamel",
+    description: "Exquisite collector's edition artisanal perfume bottles featuring 24K gold filigree butterfly wings with rhinestone inlays, hand-painted pastel floral detailing, frosted lilac spherical decanters with bronze floral motifs, and traditional Arabic gold tolas.",
+    details: [
+      "Hand-welded 24K gold-plated filigree butterfly cage with enamel blossoms",
+      "Rhinestone crystal accents on wings and faceted gem stopper",
+      "Antique bronze floral relief overlay on frosted lilac glass sphere",
+      "Traditional Arabic gold lattice tola bottle with dome stopper",
+      "Equipped with integrated glass applicator rods"
+    ],
+    image: "/images/bottles/vintage_butterfly_floral_flacons.jpg",
+    badge: "Artisanal Enamel",
+    availableOptions: ["Golden Butterfly Enamel Flacon", "Lilac Frosted Antique Bronze Flacon", "Arabic Gold Dome Tola", "Deluxe 4-Piece Showcase Set"],
+    priceNote: "Request Price / Get Wholesale Quote"
+  },
+  {
+    id: "bottle-designer-miniature-pearl",
+    name: "Prestige Designer Miniature & Pearl-Studded Flacons",
+    category: "Precious Bottles",
+    originOrType: "Haute Parfumerie Miniature Crystal Vials",
+    description: "A stunning assortment of luxury miniature perfume vials: Royal lacquer crimson bottle with golden crown, translucent frosted azure silhouette, exquisite golden pearl-beaded cube tola, modern crimson block flacon with gold lock bar, and traditional Arabic gold filigree tear bottle.",
+    details: [
+      "Five distinct architectural designs for pocket luxury & bridal gifting",
+      "Hand-set ivory pearl-beaded grid casing with gold dome finial",
+      "High-gloss royal red lacquer with sculpted golden crown cap",
+      "Curved azure frosted silhouette with mirror-finish gold stopper",
+      "Traditional Arabian palace filigree with delicate glass dipping wand"
+    ],
+    image: "/images/bottles/designer_miniature_pearl_flacons.jpg",
+    badge: "Designer Miniatures",
+    availableOptions: ["Pearl-Studded Cube Tola (6ml)", "Crimson Red Crown Flacon (6ml)", "Azure Silhouette Flacon (6ml)", "Crimson Gold Bar Flacon (6ml)", "Arabic Filigree Tear Bottle (6ml)", "Complete 5-Piece Gift Suite"],
+    priceNote: "Request Price / Get Wholesale Quote"
+  },
+  {
+    id: "bottle-luxury-bakhoor-pomade-jars",
+    name: "Royal Bakhoor Jars & Luxury Solid Perfume Containers",
+    category: "Precious Bottles",
+    originOrType: "Luxury Lacquer, Metallic & Fluted Jars",
+    description: "Multi-purpose luxury containers designed for royal bakhoor incense, solid perfume balms, scented pomades, and body creams. Featuring fluted jade-turquoise dome jars, brushed metallic copper compacts, and vibrant coral pink jars with polished gold rings.",
+    details: [
+      "High-grade cosmetic and incense preservation materials",
+      "Airtight screw lids preserving resinous aromas and moisture",
+      "Jade turquoise fluted dome with ruby ribbon accent",
+      "Metallic copper-bronze circular compact with stepped lid",
+      "Coral pink gloss jar with electroplated 24K gold accent ring",
+      "Ideal for bakhoor agarwood, solid musk, body butters, and hair pomades"
+    ],
+    image: "/images/bottles/luxury_bakhoor_pomade_jars.jpg",
+    badge: "Bakhoor & Pomade Jars",
+    availableOptions: ["Jade Turquoise Fluted Jar (50g / 100g)", "Metallic Bronze Compact (30g / 50g)", "Coral Gold-Ring Jar (50g / 100g)", "Wholesale Carton Assortment"],
+    priceNote: "Request Price / Get Wholesale Quote"
+  },
+  {
+    id: "bottle-onyx-amber-bakhoor-jars",
+    name: "Royal Amber & Onyx Bakhoor Jars with 24K Gold Ring",
+    category: "Precious Bottles",
+    originOrType: "High-Gloss Lacquer Acrylic with 24K Gold Accent",
+    description: "High-gloss luxury screw-top containers featuring deep Onyx Black and rich Amber Brown finishes adorned with 24K electroplated gold accent rings. Engineered for preserving royal bakhoor, incense chips, solid musk balms, and luxury pomades.",
+    details: [
+      "Heavyweight dual-wall high-gloss lacquer containers",
+      "Electroplated 24K polished gold ring accent collar",
+      "Airtight threaded inner seal locking in volatile aromas & moisture",
+      "Available in deep Onyx Black and rich Amber Brown finishes",
+      "Capacities: 50g, 100g, and 150g options"
+    ],
+    image: "/images/bottles/onyx_amber_bakhoor_jars.jpg",
+    badge: "Onyx & Amber Jars",
+    availableOptions: ["Onyx Black with Gold Ring (50g / 100g)", "Amber Brown with Gold Ring (50g / 100g)", "Twin Pair Gift Set", "Wholesale Pack of 12 / 24"],
     priceNote: "Request Price / Get Wholesale Quote"
   }
 ];
@@ -369,6 +689,7 @@ export const OTHERS_PRODUCTS: ProductItem[] = [
 export const ALL_PRODUCTS: ProductItem[] = [
   ...ATTAR_PRODUCTS,
   ...PERFUME_PRODUCTS,
+  ...BOTTLE_PRODUCTS,
   ...OTHERS_PRODUCTS
 ];
 

@@ -9,21 +9,21 @@ import type { ProductItem } from '../data/companyData';
 export const AttarPage: React.FC = () => {
   const [modalProduct, setModalProduct] = useState<ProductItem | null>(null);
   const [enquiryProduct, setEnquiryProduct] = useState<ProductItem | null>(null);
-  const [filter, setFilter] = useState<'ALL' | 'Single-Origin OUD' | 'Sweet & Honeyed' | 'Smoky & Deep' | 'Connoisseur Concentrates'>('ALL');
+  const [filter, setFilter] = useState<'ALL' | 'Royal & Oudh' | 'Floral & Romance' | 'Fresh & Aquatic' | 'Musk & Spiritual'>('ALL');
 
   const filteredAttars = ATTAR_PRODUCTS.filter(item => {
     if (filter === 'ALL') return true;
-    if (filter === 'Single-Origin OUD') {
-      return item.id.includes('oud');
+    if (filter === 'Royal & Oudh') {
+      return ['attar-aseel', 'attar-sultan', 'attar-dien-oud', 'attar-black-oud', 'attar-hurram', 'attar-kashmiri-oud', 'attar-white-oud', 'attar-musk-rijali', 'attar-majmoua', 'attar-shamama'].includes(item.id);
     }
-    if (filter === 'Sweet & Honeyed') {
-      return ['attar-cambodia-oud', 'attar-thailand-oud', 'attar-philippines-oud'].includes(item.id);
+    if (filter === 'Floral & Romance') {
+      return ['attar-black-rose', 'attar-persian-gulab', 'attar-jasmine', 'attar-gucci-flora', 'attar-jannat-al-firdous', 'attar-bloom-in-heaven', 'attar-shanaya'].includes(item.id);
     }
-    if (filter === 'Smoky & Deep') {
-      return ['attar-indian-oud', 'attar-indonesian-oud', 'attar-malaysian-oud', 'attar-moroccan-oud'].includes(item.id);
+    if (filter === 'Fresh & Aquatic') {
+      return ['attar-hawas', 'attar-kashmiri-oud', 'attar-jannat-al-firdous', 'attar-jasmine'].includes(item.id);
     }
-    if (filter === 'Connoisseur Concentrates') {
-      return ['attar-fragrance-oil', 'attar-vietnamese-oud', 'attar-bhutan-oud', 'attar-srilankan-oud'].includes(item.id);
+    if (filter === 'Musk & Spiritual') {
+      return ['attar-kiswa', 'attar-musk-al-tahara', 'attar-musk-rijali', 'attar-white-oud', 'attar-shamama', 'attar-majmoua', 'attar-dien-oud', 'attar-black-oud'].includes(item.id);
     }
     return true;
   });
@@ -39,10 +39,10 @@ export const AttarPage: React.FC = () => {
             <span>100% Non-Alcoholic Pure Concentrates</span>
           </div>
           <h1 className="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mt-1">
-            Artisanal Attar & Dehn Al Oudh
+            Artisanal Attars & Roll-On Perfumes
           </h1>
-          <p className="mt-3 text-sm sm:text-base text-zinc-300 max-w-2xl mx-auto">
-            Traditional Hydro-Distillations &bull; Single-Origin Agarwood Oils &bull; 10 Sovereign Origins &bull; Tolas, Bottles & Bulk Liters
+          <p className="mt-3 text-sm sm:text-base text-zinc-300 max-w-3xl mx-auto">
+            100% Non-Alcoholic Pure Concentrates &bull; Zohrain Roll-On Collection &bull; 20 Signature Scents &bull; 6ml Pocket Flacons
           </p>
         </div>
       </section>
@@ -53,38 +53,45 @@ export const AttarPage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-7 space-y-4">
               <span className="text-xs font-bold uppercase tracking-widest font-cinzel text-amber-700">
-                Heritage Distillation Art
+                Signature Roll-On Attars
               </span>
               <h2 className="font-cinzel text-2xl sm:text-3xl font-bold text-zinc-950">
-                Pure Attars Extracted from Nature’s Rarest Botanicals
+                Zohrain Perfumes Pure Attar Roll-On Collection
               </h2>
               <p className="text-zinc-600 text-sm sm:text-base leading-relaxed">
-                BARSHIP FRAGRANCES is celebrated in Hyderabad for offering authentic, unadulterated attar oils and pure Dehn Al Oudh. Hydro-distilled in traditional copper stills (deg & bhapka) as well as modern vacuum distillation units, our attars are completely free from carrier solvents, alcohol, or synthetic additives.
+                BARSHIP FRAGRANCES is proud to present the official Zohrain Perfumes roll-on attar series. Formulated with authentic, unadulterated pure perfume oils and extracts, each 6ml flacon delivers an enduring personal sillage free from alcohol, solvents, or synthetics. Experience our signature releases: Aseel, Black Rose, Sultan, Kiswa, Jannat Al Firdous, Musk Rijali, Musk Al Tahara, Persian Gulab, Majmoua, Bloom in Heaven, Hawas, Shanaya, Hurram, Dien Oud, Jasmine, Kashmiri Oud, White Oud, Gucci Flora, Black Oud, and Shamama.
               </p>
 
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
                 <div className="p-3 bg-white rounded-lg border border-zinc-200 text-xs">
                   <strong className="text-zinc-900 block font-cinzel">Alcohol-Free</strong>
-                  <span className="text-zinc-500">100% Pure oil extract</span>
+                  <span className="text-zinc-500">100% Pure oil concentrate</span>
                 </div>
                 <div className="p-3 bg-white rounded-lg border border-zinc-200 text-xs">
                   <strong className="text-zinc-900 block font-cinzel">48h+ Longevity</strong>
-                  <span className="text-zinc-500">Unsurpassed sillage on skin & cloth</span>
+                  <span className="text-zinc-500">Intense sillage on skin & cloth</span>
                 </div>
                 <div className="p-3 bg-white rounded-lg border border-zinc-200 text-xs">
-                  <strong className="text-zinc-900 block font-cinzel">Retail & Wholesale</strong>
-                  <span className="text-zinc-500">3ml, 6ml, 12ml & Bulk kg drums</span>
+                  <strong className="text-zinc-900 block font-cinzel">6ml & Bulk Packs</strong>
+                  <span className="text-zinc-500">Individual box & wholesale cartons</span>
                 </div>
               </div>
             </div>
 
             <div className="lg:col-span-5">
-              <div className="rounded-2xl overflow-hidden border border-amber-300 shadow-xl aspect-[4/3] relative">
+              <div className="rounded-2xl overflow-hidden border border-amber-300 shadow-xl aspect-[4/3] relative bg-zinc-950 flex items-center justify-center">
                 <img
-                  src="/images/attar_oil.jpg"
-                  alt="Prestige crystal attar bottle with gold filigree and glass wand"
+                  src="/images/attars/sultan.jpg"
+                  alt="Zohrain Perfumes Sultan Roll-On Attar"
                   className="w-full h-full object-cover object-center"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-transparent to-transparent flex items-end p-5">
+                  <div className="text-white">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-amber-400 font-cinzel">Featured Collection</span>
+                    <p className="font-cinzel text-lg font-bold">Zohrain Perfumes Roll-On Series</p>
+                    <p className="text-xs text-zinc-300">6ml Roll-on Perfume Flacons with Designer Packaging</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -100,16 +107,16 @@ export const AttarPage: React.FC = () => {
               The Collection
             </span>
             <h2 className="font-cinzel text-3xl sm:text-4xl font-extrabold text-zinc-950 mt-1">
-              Explore Our Attar Lineup
+              Explore Our Roll-On Attar Lineup
             </h2>
             <p className="mt-2 text-xs sm:text-sm text-zinc-600">
-              Filter by olfactory character or explore single-origin OUD attars from across the world.
+              Select a fragrance profile to discover our 100% non-alcoholic roll-on attars by Zohrain Perfumes.
             </p>
           </div>
 
           {/* Filter Pills */}
           <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
-            {(['ALL', 'Single-Origin OUD', 'Sweet & Honeyed', 'Smoky & Deep', 'Connoisseur Concentrates'] as const).map(p => (
+            {(['ALL', 'Royal & Oudh', 'Floral & Romance', 'Fresh & Aquatic', 'Musk & Spiritual'] as const).map(p => (
               <button
                 key={p}
                 onClick={() => setFilter(p)}
@@ -119,7 +126,7 @@ export const AttarPage: React.FC = () => {
                     : 'bg-zinc-100 hover:bg-zinc-200 text-zinc-700 border border-zinc-200'
                 }`}
               >
-                {p === 'ALL' ? 'All Attars & OUDs' : p}
+                {p === 'ALL' ? 'All Roll-On Attars' : p}
               </button>
             ))}
           </div>
@@ -144,10 +151,10 @@ export const AttarPage: React.FC = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="space-y-2 max-w-2xl">
               <h3 className="font-cinzel text-2xl font-bold text-white">
-                Require Bulk Attar Liters or Custom Attar Flacons?
+                Require Master Cartons or Wholesale Roll-On Supply?
               </h3>
               <p className="text-zinc-400 text-xs sm:text-sm">
-                We supply perfume brands, regional retailers, and exporters with certified pure attars in aluminum cannisters and bespoke crystal flacons.
+                We supply perfume retailers, gift boutiques, and regional distributors across India and the GCC with wholesale cartons (12-packs & master cartons) of Zohrain Perfumes roll-ons.
               </p>
             </div>
 

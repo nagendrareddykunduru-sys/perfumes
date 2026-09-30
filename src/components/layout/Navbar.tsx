@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, MessageSquare, ChevronDown, Droplet, Sparkles, Flame, ArrowRight, ChevronRight } from 'lucide-react';
+import { Menu, X, Phone, MessageSquare, ChevronDown, Droplet, Sparkles, Flame, ArrowRight, ChevronRight, Gem } from 'lucide-react';
 import { BarshipLogo } from '../common/BarshipLogo';
 import { COMPANY_DETAILS, getWhatsAppUrl } from '../../data/companyData';
 
@@ -12,7 +12,7 @@ interface DropdownItem {
 }
 
 interface DropdownCategory {
-  id: 'attar' | 'perfume' | 'others';
+  id: 'attar' | 'perfume' | 'bottles' | 'others';
   title: string;
   path: string;
   subtitle: string;
@@ -21,37 +21,37 @@ interface DropdownCategory {
   footerNote: string;
 }
 
-const DROPDOWN_MENUS: Record<'attar' | 'perfume' | 'others', DropdownCategory> = {
+const DROPDOWN_MENUS: Record<'attar' | 'perfume' | 'bottles' | 'others', DropdownCategory> = {
   attar: {
     id: 'attar',
     title: 'Attar',
     path: '/attar',
-    subtitle: 'Artisanal Perfume Oils & Pure OUD',
+    subtitle: 'Artisanal Perfume Oils & Roll-Ons',
     icon: <Droplet className="w-4 h-4 text-amber-600" />,
     items: [
       {
         name: 'All Attar Offerings',
-        desc: '100% non-alcoholic artisanal perfume oils & concentrates',
+        desc: '100% non-alcoholic artisanal perfume oils & roll-on concentrates',
         path: '/attar'
       },
       {
-        name: 'Single-Origin Dehn Al Oudh',
-        desc: 'Cambodian, Assam, Moroccan, Indonesian & 10 global origins',
+        name: 'Zohrain Roll-On Collection',
+        desc: '20 Signature Blends: Black Oud, Shamama, Kashmiri Oud, White Oud & more',
         path: '/attar',
-        badge: '10 Origins'
+        badge: '20 Scents'
       },
       {
-        name: 'Sweet & Floral Accords',
-        desc: 'Royal Taif Rose, White Musk, Amber & Jasmine Sambac',
+        name: 'Royal & Pure Oudh Accords',
+        desc: 'Black Oud, Shamama, Dien Oud, Hurram, Kashmiri Oud & Sultan',
         path: '/attar'
       },
       {
-        name: 'Smoky & Connoisseur Distillates',
-        desc: 'Aged vintage agarwood harvests, Trat, and rare mukhallats',
+        name: 'Floral, Musk & Sacred Blends',
+        desc: 'Gucci Flora, Jasmine, Persian Gulab, Black Rose & Kiswa',
         path: '/attar'
       }
     ],
-    footerNote: 'Hand-poured into 3ml, 6ml crystal tolas & bespoke gift boxes'
+    footerNote: 'Available in 6ml roll-on flacons, individual gift boxes & wholesale cartons'
   },
   perfume: {
     id: 'perfume',
@@ -83,6 +83,49 @@ const DROPDOWN_MENUS: Record<'attar' | 'perfume' | 'others', DropdownCategory> =
       }
     ],
     footerNote: 'Equipped with Italian fine-mist pumps in 50ml and 100ml sizes'
+  },
+  bottles: {
+    id: 'bottles',
+    title: 'Precious Perfume Bottles',
+    path: '/precious-bottles',
+    subtitle: 'Luxury Flacons, Canisters & Ornate Jars',
+    icon: <Gem className="w-4 h-4 text-amber-600" />,
+    items: [
+      {
+        name: 'All Precious Perfume Bottles',
+        desc: 'Hand-cut crystal tolas, jeweled flacons, and wholesale canisters',
+        path: '/precious-bottles'
+      },
+      {
+        name: 'Gemstone Crystal Tolas',
+        desc: 'Emerald & Sapphire faceted gem finials with glass wands',
+        path: '/precious-bottles',
+        badge: 'Gem Finials'
+      },
+      {
+        name: 'Enamelled Butterfly Flacons',
+        desc: '24K gold filigree butterfly wings & antique floral relief',
+        path: '/precious-bottles',
+        badge: 'Artisanal'
+      },
+      {
+        name: 'Designer Miniature & Pearl Vials',
+        desc: 'Pearl-beaded cubes, crimson crown bottles & azure silhouettes',
+        path: '/precious-bottles'
+      },
+      {
+        name: 'Wholesale Aluminum Canisters',
+        desc: '100ml to 1000ml pure oil storage & export transport canisters',
+        path: '/precious-bottles',
+        badge: 'Bulk Export'
+      },
+      {
+        name: 'Royal Bakhoor & Pomade Jars',
+        desc: 'Jade fluted domes, copper compacts & coral gold-ring jars',
+        path: '/precious-bottles'
+      }
+    ],
+    footerNote: 'Custom logo embossing, silk-screen printing & wholesale bulk supply available'
   },
   others: {
     id: 'others',
@@ -130,8 +173,8 @@ const DROPDOWN_MENUS: Record<'attar' | 'perfume' | 'others', DropdownCategory> =
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<'attar' | 'perfume' | 'others' | null>(null);
-  const [expandedMobileCategory, setExpandedMobileCategory] = useState<'attar' | 'perfume' | 'others' | null>(null);
+  const [activeDropdown, setActiveDropdown] = useState<'attar' | 'perfume' | 'bottles' | 'others' | null>(null);
+  const [expandedMobileCategory, setExpandedMobileCategory] = useState<'attar' | 'perfume' | 'bottles' | 'others' | null>(null);
   const location = useLocation();
   const dropdownTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -154,7 +197,7 @@ export const Navbar: React.FC = () => {
     setExpandedMobileCategory(null);
   }, [location.pathname]);
 
-  const handleMouseEnter = (key: 'attar' | 'perfume' | 'others') => {
+  const handleMouseEnter = (key: 'attar' | 'perfume' | 'bottles' | 'others') => {
     if (dropdownTimeoutRef.current) {
       clearTimeout(dropdownTimeoutRef.current);
       dropdownTimeoutRef.current = null;
@@ -171,7 +214,7 @@ export const Navbar: React.FC = () => {
     }, 180);
   };
 
-  const toggleMobileCategory = (key: 'attar' | 'perfume' | 'others', e: React.MouseEvent) => {
+  const toggleMobileCategory = (key: 'attar' | 'perfume' | 'bottles' | 'others', e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
     setExpandedMobileCategory(prev => prev === key ? null : key);
@@ -454,6 +497,99 @@ export const Navbar: React.FC = () => {
                 )}
               </div>
 
+              {/* Precious Bottles with Dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => handleMouseEnter('bottles')}
+                onMouseLeave={handleMouseLeave}
+              >
+                <NavLink
+                  to="/precious-bottles"
+                  className={({ isActive }) =>
+                    `px-3 py-2 text-sm font-medium transition-colors relative tracking-wide inline-flex items-center gap-1.5 ${
+                      isActive || activeDropdown === 'bottles'
+                        ? 'text-amber-700 font-semibold'
+                        : 'text-zinc-700 hover:text-amber-700'
+                    }`
+                  }
+                >
+                  <span>Precious Perfume Bottles</span>
+                  <ChevronDown
+                    className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                      activeDropdown === 'bottles' ? 'rotate-180 text-amber-600' : 'text-zinc-400'
+                    }`}
+                  />
+                  {location.pathname === '/precious-bottles' && (
+                    <span className="absolute bottom-0 left-3 right-3 h-[2px] bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600 rounded-full" />
+                  )}
+                </NavLink>
+
+                {/* Dropdown Panel */}
+                {activeDropdown === 'bottles' && (
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-[400px] z-50 animate-in fade-in slide-in-from-top-1 duration-200">
+                    <div className="bg-white rounded-2xl shadow-2xl border border-amber-200/90 overflow-hidden">
+                      {/* Top gold bar */}
+                      <div className="h-1 bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500" />
+                      
+                      {/* Header */}
+                      <div className="p-4 pb-3 bg-zinc-50/70 border-b border-zinc-100 flex items-center justify-between">
+                        <div className="flex items-center gap-2.5">
+                          <div className="w-8 h-8 rounded-lg bg-amber-100/70 flex items-center justify-center border border-amber-200">
+                            {DROPDOWN_MENUS.bottles.icon}
+                          </div>
+                          <div>
+                            <h4 className="font-cinzel text-xs font-bold text-zinc-950 uppercase tracking-wider">
+                              Precious Perfume Bottles
+                            </h4>
+                            <p className="text-[11px] text-zinc-500">Luxury Flacons, Canisters & Ornate Jars</p>
+                          </div>
+                        </div>
+                        <Link
+                          to="/precious-bottles"
+                          className="text-[11px] font-semibold text-amber-700 hover:text-amber-800 flex items-center gap-1"
+                        >
+                          <span>Explore</span>
+                          <ArrowRight className="w-3 h-3" />
+                        </Link>
+                      </div>
+
+                      {/* Items */}
+                      <div className="p-2 space-y-1">
+                        {DROPDOWN_MENUS.bottles.items.map((item, idx) => (
+                          <Link
+                            key={idx}
+                            to={item.path}
+                            className="group flex items-start justify-between p-2.5 rounded-xl hover:bg-amber-50/70 border border-transparent hover:border-amber-200/60 transition-colors"
+                          >
+                            <div className="space-y-0.5 pr-2">
+                              <div className="flex items-center gap-2">
+                                <span className="text-xs font-semibold text-zinc-900 group-hover:text-amber-800 transition-colors">
+                                  {item.name}
+                                </span>
+                                {item.badge && (
+                                  <span className="text-[9px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded-full bg-amber-100 text-amber-900 border border-amber-200">
+                                    {item.badge}
+                                  </span>
+                                )}
+                              </div>
+                              <p className="text-[11px] text-zinc-500 line-clamp-1 leading-snug">
+                                {item.desc}
+                              </p>
+                            </div>
+                            <ChevronRight className="w-3.5 h-3.5 text-zinc-400 group-hover:text-amber-600 group-hover:translate-x-0.5 transition-all flex-shrink-0 mt-1" />
+                          </Link>
+                        ))}
+                      </div>
+
+                      {/* Footer Note */}
+                      <div className="p-3 bg-amber-50/60 border-t border-amber-100 flex items-center justify-between text-[11px] text-zinc-600">
+                        <span>{DROPDOWN_MENUS.bottles.footerNote}</span>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+
               {/* 5. Others with Dropdown */}
               <div
                 className="relative"
@@ -703,6 +839,49 @@ export const Navbar: React.FC = () => {
                 {expandedMobileCategory === 'perfume' && (
                   <div className="pl-4 pr-2 py-2 ml-3 border-l-2 border-amber-300 space-y-1 bg-amber-50/40 rounded-r-lg">
                     {DROPDOWN_MENUS.perfume.items.map((item, idx) => (
+                      <Link
+                        key={idx}
+                        to={item.path}
+                        className="block py-1.5 px-2 text-xs text-zinc-700 hover:text-amber-900 rounded font-medium"
+                      >
+                        &bull; {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Precious Bottles with Expandable Accordion */}
+              <div>
+                <div className="flex items-center justify-between rounded-md hover:bg-zinc-50">
+                  <NavLink
+                    to="/precious-bottles"
+                    className={({ isActive }) =>
+                      `flex-1 px-3 py-2.5 text-base font-medium transition-colors ${
+                        isActive
+                          ? 'text-amber-800 font-semibold border-l-4 border-amber-600'
+                          : 'text-zinc-800'
+                      }`
+                    }
+                  >
+                    Precious Perfume Bottles
+                  </NavLink>
+                  <button
+                    onClick={(e) => toggleMobileCategory('bottles', e)}
+                    className="p-2.5 text-zinc-500 hover:text-amber-700"
+                    aria-label="Toggle Precious Perfume Bottles categories"
+                  >
+                    <ChevronDown
+                      className={`w-4 h-4 transition-transform duration-200 ${
+                        expandedMobileCategory === 'bottles' ? 'rotate-180 text-amber-600' : ''
+                      }`}
+                    />
+                  </button>
+                </div>
+
+                {expandedMobileCategory === 'bottles' && (
+                  <div className="pl-4 pr-2 py-2 ml-3 border-l-2 border-amber-300 space-y-1 bg-amber-50/40 rounded-r-lg">
+                    {DROPDOWN_MENUS.bottles.items.map((item, idx) => (
                       <Link
                         key={idx}
                         to={item.path}

@@ -39,6 +39,12 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/precious-bottles" className="hover:text-amber-400 transition-colors flex items-center gap-1.5 text-xs text-zinc-300">
+                  <ArrowUpRight className="w-3 h-3 text-amber-500" />
+                  Precious Perfume Bottles
+                </Link>
+              </li>
+              <li>
                 <Link to="/others" className="hover:text-amber-400 transition-colors flex items-center gap-1.5 text-xs text-zinc-300">
                   <ArrowUpRight className="w-3 h-3 text-amber-500" />
                   Bakhoor & Others
@@ -73,6 +79,11 @@ export const Footer: React.FC = () => {
               <li>
                 <Link to="/perfume" className="hover:text-amber-400 transition-colors block">
                   Fine Perfumes (Extrait & EDP)
+                </Link>
+              </li>
+              <li>
+                <Link to="/precious-bottles" className="hover:text-amber-400 transition-colors block">
+                  Precious Perfume Bottles & Crystal Tolas
                 </Link>
               </li>
               <li>

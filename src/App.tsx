@@ -10,6 +10,7 @@ import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
 import { AttarPage } from './pages/AttarPage';
 import { PerfumePage } from './pages/PerfumePage';
+import { PreciousBottlesPage } from './pages/PreciousBottlesPage';
 import { OthersPage } from './pages/OthersPage';
 import { RetailPage } from './pages/RetailPage';
 import { ImportersExportersPage } from './pages/ImportersExportersPage';
@@ -32,6 +33,8 @@ export function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/attar" element={<AttarPage />} />
             <Route path="/perfume" element={<PerfumePage />} />
+            <Route path="/precious-bottles" element={<PreciousBottlesPage />} />
+            <Route path="/bottles" element={<PreciousBottlesPage />} />
             <Route path="/others" element={<OthersPage />} />
             <Route path="/retail" element={<RetailPage />} />
             <Route path="/importers-exporters" element={<ImportersExportersPage />} />
