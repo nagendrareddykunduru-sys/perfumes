@@ -695,7 +695,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
 
 export function getWhatsAppUrl(productName?: string, category?: string): string {
   const phone = COMPANY_DETAILS.primaryWhatsAppRaw;
-  const message = productName 
+  const message = productName
     ? `Hello BARSHIP Fragrances,\nI am interested in ${productName}${category ? ` (${category})` : ''}.\nPlease provide pricing and product details.`
     : `Hello BARSHIP Fragrances,\nI would like to enquire about your Attars, Perfumes, and ambient collections.`;
   return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
